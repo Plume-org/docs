@@ -1,4 +1,6 @@
-# API documentation
+---
+title: API documentation
+---
 
 ## Getting an API token
 
@@ -31,17 +33,18 @@ To authenticate your requests you should put this token in the `Authorization` h
 Authorization: Bearer <YOUR TOKEN HERE>
 ```
 
+<script src="//unpkg.com/swagger-ui-dist@3/swagger-ui-standalone-preset.js"></script>
 <script src="//unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js"></script>
 
 <div id="api"></div>
 
 <script>
 const ui = SwaggerUIBundle({
-    url: "/Plume/api.yaml",
+    url: "/api.yaml",
     dom_id: '#api',
     presets: [
         SwaggerUIBundle.presets.apis,
-        SwaggerUIBundle.SwaggerUIStandalonePreset
+        SwaggerUIStandalonePreset
     ],
     layout: "StandaloneLayout"
 })

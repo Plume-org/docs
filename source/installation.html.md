@@ -1,4 +1,6 @@
-# Installing Plume (for development or production)
+---
+title: Installing Plume (for development or production)
+---
 
 ## Prerequisites
 
@@ -158,7 +160,7 @@ BASE_URL=plu.me
 ROCKET_SECRET_KEY=
 ```
 
-For more information about what you can put in your `.env`, see [the documentation about environment variables](ENV-VARS.md).
+For more information about what you can put in your `.env`, see [the documentation about environment variables](/environment).
 
 ## Running migrations
 
@@ -199,7 +201,7 @@ You will also need to initialise search index
 plm search init -p path/to/plume/workingdir
 ```
 
-For more information about these commands, and the arguments you can give them, check out [their documentaion](CLI.md).
+For more information about these commands, and the arguments you can give them, check out [their documentaion](/CLI).
 
 Finally, you can start Plume with:
 

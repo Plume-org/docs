@@ -1,24 +1,92 @@
-body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+$plume: #7765e3;
+$plumedark: #6457a6;
+$gray: #F4F4F4;
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+html, body {
+  padding: 0px;
+  margin: 0px;
 }
 
-a {
-  color: rgba(#000, 0.7);
+h1, h2, h3 {
+  font-family: 'Playfair Display';
+}
 
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
+header {
+  margin: auto;
+  padding: 30vh 20vw;
+  background: linear-gradient(0deg, $plumedark, $plume);
+  color: white;
+  font-size: 1.5em;
+}
+
+body > main > * {
+  padding: 0px 20vw;
+}
+
+nav {
+  padding: 0px 20vw;
+  background: $gray;
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      a {
+        display: block;
+        padding: 2em 0em;
+        border-bottom: 2px solid transparent;
+        transition: all ease-in 0.2s;
+
+        &:hover {
+          border-bottom-color: $plume;
+        }
+      }
+    }
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+a, a:visited {
+  text-decoration: none;
+  color: $plume;
+}
+
+footer {
+  padding: 5em 5vw;
+  background: $gray;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.highlight {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  overflow-x: auto;
+}
+
+body > main {
+  margin-top: 2em;
+  line-height: 1.3em;
+
+  ul {
+    padding-left: calc(20vw + 1.5em);
+    li {
+      padding: 0.5em 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body > main > * {
+    padding: 0 5vw;
+  }
+
+  header {
+    padding: 10vh 20vw;
+    text-align: center;
+  }
 }

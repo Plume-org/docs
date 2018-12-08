@@ -1,4 +1,6 @@
-# How Plume Federates
+---
+title: How Plume Federates
+---
 
 To federate with other Fediverse software (and itself), Plume uses various 
 protocols:

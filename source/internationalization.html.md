@@ -1,4 +1,6 @@
-# Making Plume available in your language
+---
+title: Making Plume available in your language
+---
 
 *You will need to have basic git and GitHub knownledge to follow this guide. But we plan to setup a more user-friendly translation tool in the future.*
 

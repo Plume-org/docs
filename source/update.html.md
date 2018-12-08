@@ -1,4 +1,6 @@
-# Updating your instance
+---
+title: Updating your instance
+---
 
 To update your instance, run these commands with `plume` user if you created it, or with your default user, in the Plume directory.
 

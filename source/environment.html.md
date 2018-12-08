@@ -1,4 +1,6 @@
-# Useful Environment Variables
+---
+title: Useful Environment Variables
+---
 
 Plume relies on some environment variables for some configuration options. You can either set them before
 starting the app with `cargo run` or write them in a `.env` file to have automatically loaded.

@@ -1,4 +1,6 @@
-# `plm` CLI reference
+---
+title: plm CLI reference
+---
 
 If any required argument is ommitted, you will be asked to input manually.
 

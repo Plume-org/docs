@@ -1,8 +1,10 @@
-# Development Guide
+---
+title: Development Guide
+---
 
 ## Installing the development environment
 
-Please refer to the [installation guide](INSTALL.md).
+Please refer to the [installation guide](/installation).
 
 ## Testing the federation
 
