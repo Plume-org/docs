@@ -218,8 +218,8 @@ You can use `docker` and `docker-compose` in order to manage your Plume instance
 ```bash
 git clone git@github.com:Plume-org/Plume.git
 cd Plume
-cp docs/docker-compose.sample.yml docker-compose.yml
-cp docs/docker.sample.env .env
+curl https://docs.joinplu.me/docker-compose.sample.yml > docker-compose.yml
+curl https://docs.joinplu.me/docker.sample.env > .env
 
 # Build the containers
 docker-compose build
