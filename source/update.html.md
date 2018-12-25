@@ -6,6 +6,7 @@ To update your instance, run these commands with `plume` user if you created it,
 
 ```bash
 git pull origin master
+cargo web deploy -p plume-front
 cargo install --force && cargo install --path plume-cli --force
 
 # Run the migrations
