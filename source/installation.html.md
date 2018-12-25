@@ -13,7 +13,6 @@ In order to be installed and to work correctly, Plume needs:
 - *GetText* (to manage translations)
 - *Rust* and *Cargo* (to build the code)
 - *OpenSSL* and *OpenSSL librairies* (for security)
-- *xz* (for gettext-sys compilation)
 - *pkg-config* (for openssl-sys compilation)
 
 All the following instructions will need a terminal.
@@ -30,10 +29,10 @@ On **Debian**:
 apt update
 
 # If you want PostgreSQL
-apt install gettext postgresql postgresql-contrib libpq-dev git curl gcc make openssl libssl-dev xz-utils pkg-config
+apt install gettext postgresql postgresql-contrib libpq-dev git curl gcc make openssl libssl-dev pkg-config
 
 # If you want SQlite
-apt install gettext libsqlite3-dev git curl gcc make openssl libssl-dev xz-utils pkg-config
+apt install gettext libsqlite3-dev git curl gcc make openssl libssl-dev pkg-config
 
 ```
 
@@ -184,7 +183,14 @@ When in doubt, run them.
 Then, you'll need to install Plume and the CLI tools to manage your instance.
 
 ```
+# Build the front-end
+cargo install cargo-web
+cargo web deploy -p plume-front
+
+# Build the back-end
 cargo install --no-default-features --features $FEATURES
+
+# Build plm, the CLI helper
 cargo install --no-default-features --features $FEATURES --path plume-cli
 ```
 
@@ -287,7 +293,7 @@ server {
 	add_header X-XSS-Protection "1; mode=block";
 	add_header Content-Security-Policy "default-src 'self' 'unsafe-inline'; frame-ancestors 'self'; frame-src https:";
 
-    location ~*  \.(jpg|jpeg|png|gif|ico|js|pdf)$ {
+    location ~*  \.(jpg|jpeg|png|gif|ico|js|pdf|wasm)$ {
         add_header Cache-Control "public";
         expires 7d;
     }
@@ -556,7 +562,7 @@ Now start the services:
 ## Caveats:
 
 - Pgbouncer is not supported yet (named transactions are used).
-- Rust nightly is a moving target, dependancies can break and sometimes you need to check a few versions to find the one working (run `rustup override set nightly-2018-07-17` in the Plume directory if you have issues during the compilation)
+- Rust nightly is a moving target, dependancies can break and sometimes you need to check a few versions to find the one working (run `rustup override set nightly-2018-12-06` in the Plume directory if you have issues during the compilation)
 
 ## Acknowledgements
 
