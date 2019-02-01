@@ -207,7 +207,7 @@ You will also need to initialise search index
 plm search init -p path/to/plume/workingdir
 ```
 
-For more information about these commands, and the arguments you can give them, check out [their documentaion](/CLI).
+For more information about these commands, and the arguments you can give them, check out [their documentation](/CLI).
 
 Finally, you can start Plume with:
 
