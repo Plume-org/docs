@@ -60,7 +60,7 @@ plm search init
 ```
 
 For more information about these commands, and the arguments you can give them,
-check out [their documentaion](/CLI).
+check out [their documentation](/CLI).
 
 Now that Plume is configured, if you are in a production environment you probably
 want to configure your init system to make it easier to manage.
