@@ -15,7 +15,7 @@ h1, h2, h3 {
 
 header {
   margin: auto;
-  padding: 30vh 20vw;
+  padding: 20vh 20vw;
   background: linear-gradient(0deg, $plumedark, $plume);
   color: white;
   font-size: 1.5em;
@@ -28,12 +28,19 @@ body > main > * {
 nav {
   padding: 0px 20vw;
   background: $gray;
+
+  img {
+    display: inline;
+    height: 2em;
+    width: 2em;
+  }
+
   ul {
     list-style: none;
     padding: 0px;
     margin: 0px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid: 1fr / auto-flow;
 
     li {
       a {
@@ -46,6 +53,22 @@ nav {
           border-bottom-color: $plume;
         }
       }
+    }
+  }
+}
+
+nav:not(.left-menu) li {
+  display: flex;
+  align-items: stretch;
+  justify-items: stretch;
+
+  a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      margin: 0px 20px;
     }
   }
 }
@@ -80,6 +103,123 @@ body > main {
   }
 }
 
+.left-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 25vw;
+  left: -24vw;
+  padding: 0px;
+  box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: all ease-in 0.2s;
+
+  h1 a {
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  ul {
+    display: block;
+    text-transform: none;
+    font-weight: 400;
+
+    li {
+      display: inline;
+
+      a {
+        display: block;
+        padding: 2em;
+        border-bottom: none;
+        border-left: 5px solid transparent;
+        transition: all ease-in 0.2s;
+
+        &:hover {
+          border-left-color: $plume;
+        }
+      }
+    }
+  }
+
+  & > ul {
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  & > ul > li > ul {
+    font-weight: 600;
+    & > li > a {
+      padding-left: 3em;
+    }
+  }
+
+  & > ul > li > ul > li > ul > li > a {
+    padding-left: 4em;
+  }
+
+  &:hover {
+    overflow-y: auto;
+    left: 0vw;
+  }
+}
+
+.choices {
+  display: flex;
+  justify-items: stretch;
+  list-style: none;
+  & > li {
+    flex: 1;
+    a {
+      text-align: center;
+      border-radius: 5px;
+      display: block;
+      padding: 2em;
+      transition: all ease-in 0.2s;
+
+      &:hover {
+        background: $gray;
+      }
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid: auto-flow / 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  margin-top: 60px;
+
+  article {
+    background: $gray;
+    min-height: 100px;
+    padding: 20px;
+    h2, svg {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      max-width: 75%;
+    }
+
+    transition: all ease-in 0.2s;
+    &:hover {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+a.action {
+  text-align: center;
+  display: block;
+  padding: 20px;
+  max-width: 200px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background: $plume;
+  color: white;
+}
+
 @media screen and (max-width: 1000px) {
   body > main > * {
     padding: 0 5vw;
@@ -88,5 +228,9 @@ body > main {
   header {
     padding: 10vh 20vw;
     text-align: center;
+  }
+
+  .left-menu {
+    display: none;
   }
 }

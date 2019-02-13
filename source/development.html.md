@@ -1,89 +1,118 @@
 ---
 title: Development Guide
+icon: git-merge
+summary: 'How to install Plume on your computer and make changes to the source code.
+This guide also gives you tips for making debugging and testing easier.'
+priority: 2
 ---
 
 ## Installing the development environment
 
-Please refer to the [installation guide](/installation).
+Please refer to the [installation guide](/installation). Choose to compile Plume
+from source when asked. Instead of using `cargo install`, use `cargo run` which
+starts a freshly compiled debugging version of Plume.
 
 ## Testing the federation
 
-To test the federation, you'll need to setup another database (see "Setup the database"),
-also owned by the "plume" user, but with a different name. Then, you'll need to run the
-migrations for this database too.
+To test the federation, you'll need to setup another database,
+also owned by the "plume" user, but with a different name. Then, you'll need to setup
+this instance too.
+
+The easiest way to do it is probably to install `plm` and `plume` globally (as explained
+[here](/installation/with/source-code)), but with the `--debug` flag to avoid long compilation
+times. Then create a copy of your `.env` file in another directory, and change the `DATABASE_URL`
+and `ROCKET_PORT` variables. Then copy the migration files in this new directory and run them.
 
 ```
-diesel migration run --database-url postgres://plume:plume@localhost/my_other_plume_db
+diesel migration run
 ```
 
-To run this other instance, you'll need to give two environment variables:
+Setup the new instance with `plm` [as explained here](/installation/config).
 
-- `ROCKET_PORT`, the port on which your app will run
-- `DB_NAME`, the name of the database you just created
-
-```
-ROCKET_PORT=3033 DB_NAME=my_other_plume_db cargo run
-```
-
-If you don't want to setup HTTPS locally, you can also disable it by running your instance with `USE_HTTPS=0` set.
+Now, all you need for your two instances to be able to communicate is a fake domain
+name with HTTPS for each of them. The first step to have that on your local machine is
+to edit your `/etc/hosts` file, to create two new aliases by adding the following lines.
 
 ```
-USE_HTTPS=0 cargo run
+127.0.0.1       plume.one
+127.0.0.1       plume.two
 ```
 
-## Making a Pull Request
-To create an upstream fork of the repository in GitHub, click "Fork" in the top right button on the main page of the [Plume repository](https://github.com/Plume-org/Plume). Now, in the command line, set another remote for the repository by running the following command, replacing `myname` with the name under which you forked the repo. You can use another name besides `upstream` if you prefer. Using [SSH](https://help.github.com/articles/connecting-to-github-with-ssh/) is recommended.
+Now, we need to create SSL certificates for each of these domains. We will use `mkcert`
+for this purpose. Here are [the instructions to install it](https://github.com/FiloSottile/mkcert#installation).
+Once you installed it, run.
 
-```
-git remote add upstream git@github.com/myname/Plume.git
-# Alt # git remote add upstream https://github.com/myname/Plume.git
-```
-
-Now, make any changes to the code you want. After committing your changes, push to the upstream fork. Once your changes are made, visit the GitHub page for your fork and select "New pull request". Add descriptive text, any issue numbers using hashtags to reference the issue number, screenshots of your changes if relevant, a description of how you tested your changes, and any other information that will help the project maintainers be able to quickly accept your pull requests.
-
-The project maintainers may suggest further changes to improve the pull request even more. After implementing this locally, you can push to your upstream fork again and the changes will immediately show up in the pull request after pushing. Once all the suggested changes are made, the pull request may be accepted. Thanks for contributing.
-
-## When working with Tera templates
-
-When working with the interface, or any message that will be displayed to the final user, keep in mind that Plume is an internationalized software. To make sure that the parts of the interface you are changing are translatable, you should:
-
-- Use the `_` and `_n` filters instead of directly writing strings in your HTML markup
-- Add the strings to translate to the `po/plume.pot` file
-
-Here is an example: let's say we want to add two strings, a simple one and one that may deal with plurals. The first step is to add them to whatever template we want to display them in:
-
-```jinja
-<p>{{ "Hello, world!" | _ }}</p>
-
-<p>{{ "You have {{ count }} new notifications" | _n(singular="You have one new notification", count=n_notifications) }}</p>
+```bash
+mkcert -install
+mkcert plume.one plume.two
 ```
 
-As you can see, the `_` doesn't need any special argument to work, but `_n` requires `singular` (the singular form, in English) and `count` (the number of items, to determine which form to use) to be present. Note that any parameters given to these filters can be used as regular Tera variables inside of the translated strings, like we are doing with the `count` variable in the second string above.
+Finally, we need a reverse proxy to load these certificates and redirect to the correct Plume instance for each domain.
+We will use Caddy here as it is really simple to configure, but if you are more at ease with something else you can also
+use alternatives.
 
-The second step is to add them to POT file. To add a simple message, just do:
+To install Caddy, please refer to [their website](https://caddyserver.com/download). Then create
+a file called `Caddyfile` in the same directory you ran `mkcert` and write this inside.
 
-```po
-msgid "Hello, world" # The string you used with your filter
-msgstr "" # Always empty
+```
+plume.one:443 {
+  bind 127.0.0.1
+  proxy / 127.0.0.1:7878 {
+    transparent
+  }
+  tls plume.one+1.pem plume.one+1-key.pem
+}
+
+plume.two:443 {
+  bind 127.0.0.1
+  proxy / 127.0.0.1:8787 {
+    transparent
+  }
+  tls plume.one+1.pem plume.one+1-key.pem
+}
 ```
 
-For plural forms, the syntax is a bit different:
+Eventually replace the ports in the `proxy` blocks by the one of your two instances, and
+then run `caddy`. You can now open your browser and load `https://plume.one` and `https://plume.two`.
 
-```po
-msgid "You have one new notification" # The singular form
-msgid_plural "You have {{ count }} new notifications" # The plural one
-msgstr[0] ""
-msgstr[1] ""
-```
+# Running tests
 
-And that's it! Once these new messages will have been translated, they will correctly be displayed in the requested locale!
+To run tests of `plume-models` use `RUST_TEST_THREADS=1`, otherwise tests are run
+concurrently, which causes error because they all use the same database.
 
-## Code Style
+# Internationalization
+
+To mark a string as translatable wrap it in the `i18n!` macro. The first argument
+should be the catalog to load translations from (usually `ctx.1` in templates), the
+second the string to translate. You can specify format arguments after a `;`.
+
+If your string vary depending on the number of elements, provide the plural version
+as the third arguments, and the number of element as the first format argument.
+
+You can find example uses of this macro [here](https://github.com/Plume-org/gettext-macros#example)
+
+# Working with the front-end
+
+When working with the front-end, we try limit our use of JavaScript as much as possible.
+Actually, we are not even using JavaScript since our front-end also uses Rust thanks to WebAssembly.
+But we want Plume to work with as little JavaScript as possible, since reading a post (Plume's first goal)
+shouldn't require a lot of interactions with the page.
+
+When editing SCSS files, it is good to know that they are compiled by `cargo` too. But `cargo` can be
+a bit slow, since it recompiles all of Plume every time, not only the SCSS files. A workaround is to run
+`cargo run` in the background, and use `cargo build` to compile your SCSS, then kill it before the end of
+the build. To know when your SCSS have been compiled, wait for cargo to tell you it is compiling `plume(bin)`
+and not `plume(build)` (next to the progress bar).
+
+Also, templates are using the Ructe syntax, which is a mix of Rust and HTML. They are compiled to Rust
+and embedded in Plume, which means you have to re-run `cargo` everytime you make a change to the templates.
+
+# Code Style
 
 For Rust, use the standard style. `rustfmt` can help you keeping your code clean.
 
-For CSS, the only rule is to use One True Brace Style.
+For SCSS, the only rules are to use One True Brace Style and two spaces to indent code.
 
 For JavaScript, we use [the JavaScript Standard Style](https://standardjs.com/).
 
-For HTML/Tera templates, we use HTML5 syntax.
+For HTML/Ructe templates, we use HTML5 syntax.

@@ -1,0 +1,16 @@
+<% if items.size > 0 %>
+    <ul>
+        <% items.each do |i| %>
+            <li>
+                <a href="<%= i.url %>"><%= i.data.title %></a>
+                <%= partial :nav_item, :locals => {
+                    :items => resources.select{ |r|
+                        r.url.split("/").size == i.url.split("/").size + 1 &&
+                        r.url.start_with?(i.url)
+                    },
+                    :resources => resources
+                } %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>

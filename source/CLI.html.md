@@ -1,5 +1,8 @@
 ---
 title: plm CLI reference
+icon: terminal
+summary: 'plm is a little CLI tool that can help you to manage your instance from the
+command line if you are admin of an instance.'
 ---
 
 If any required argument is ommitted, you will be asked to input manually.

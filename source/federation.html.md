@@ -1,5 +1,8 @@
 ---
 title: How Plume Federates
+icon: send
+summary: 'A summary of the standards Plume uses to federate, how they are implemented,
+and which parts of these standards are available or not in Plume.'
 ---
 
 To federate with other Fediverse software (and itself), Plume uses various 

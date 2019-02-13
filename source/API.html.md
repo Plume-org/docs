@@ -1,5 +1,7 @@
 ---
 title: API documentation
+icon: code
+summary: Plume can be extended by other applications thanks to a REST API.
 ---
 
 ## Getting an API token

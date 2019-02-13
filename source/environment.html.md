@@ -1,5 +1,8 @@
 ---
 title: Useful Environment Variables
+icon: file-text
+summary: 'Plume uses environment variable to configure instances. You can use them
+to configure the database, or the HTTP interface for instance.'
 ---
 
 Plume relies on some environment variables for some configuration options. You can either set them before

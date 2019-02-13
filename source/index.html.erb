@@ -2,8 +2,21 @@
 title: Plume documentation
 ---
 
-<ul>
-<% sitemap.resources.select{ |p| p.path =~ /\.html/ && p.path != "index.html" }.each do |res| %>
-    <li><a href="<%= res.url %>"><%= res.data.title %></a></li>
+<h1>Topics</h1>
+
+<div class="cards">
+<% sitemap.resources
+    .select{ |p| p.path =~ /\.html/ && p.path != "index.html" && p.url.chomp('/').split('/').size == 2 }
+    .sort{ |a, b| a.data.title <=> b.data.title }
+    .sort{ |a, b| -(a.data.priority || 0) <=> -(b.data.priority || 0) }
+    .each do |res|
+%>
+    <article>
+        <i data-feather="<%= res.data.icon %>"></i>
+        <h2>
+            <a href="<%= res.url %>"><%= res.data.title %></a>
+        </h2>
+        <p><%= res.data.summary %></p>
+    </article>
 <% end %>
-</ul>
+</div>
