@@ -45,3 +45,27 @@ SSLStaplingCache "shmcb:logs/stapling-cache(150000)"
 ```
 
 Restart Apache, and your Plume instance should be accessible!
+
+## Using mod_md
+
+Since Apache httpd 2.4.30, there's a new *experimental* module called [mod_md](https://httpd.apache.org/docs/current/mod/mod_md.html) that helps ease the configuration of Let's Encrypt vhosts. Again replace `DOMAIN_NAME` with your domain:
+
+```apache
+MDBaseServer on
+MDCertificateAgreement https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf
+MDRequireHttps permanent    # This means our http vhost will be automatically redirect to https
+ServerAdmin you@DOMAIN_NAME # This is required to register with Let's Encrypt
+
+MDomain DOMAIN_NAME auto
+
+<VirtualHost *:80>
+    ServerName DOMAIN_NAME
+<VirtualHost>
+
+<VirtualHost *:443>
+    ServerName DOMAIN_NAME
+    ProxyPass / http://127.0.0.1:7878/
+    ProxyPassReverse / http://127.0.0.1:7878/
+    SSLEngine On
+<VirtualHost>
+```
