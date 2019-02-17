@@ -1,6 +1,7 @@
 $plume: #7765e3;
 $plumedark: #6457a6;
 $gray: #F4F4F4;
+$black: invert($gray);
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
@@ -14,19 +15,33 @@ h1, h2, h3 {
 }
 
 header {
-  margin: auto;
+  grid-area: head;
+  margin: 0;
   padding: 20vh 20vw;
   background: linear-gradient(0deg, $plumedark, $plume);
   color: white;
   font-size: 1.5em;
 }
 
-body > main > * {
-  padding: 0px 20vw;
+body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas:
+    "menu head head head head"
+    "menu cont cont cont cont"
+    "menu foot foot foot foot";
+}
+
+
+body > main > nav, body > main > nav ul {
+  padding: 0;
+  li {
+    padding: 0;
+  }
 }
 
 nav {
-  padding: 0px 20vw;
   background: $gray;
 
   img {
@@ -57,7 +72,7 @@ nav {
   }
 }
 
-nav:not(.left-menu) li {
+main nav li {
   display: flex;
   align-items: stretch;
   justify-items: stretch;
@@ -81,8 +96,8 @@ a, a:visited {
 footer {
   padding: 5em 5vw;
   background: $gray;
-  margin-top: 10vh;
   text-align: center;
+  grid-area: foot;
 }
 
 .highlight {
@@ -92,82 +107,101 @@ footer {
 }
 
 body > main {
-  margin-top: 2em;
+  grid-area: cont;
   line-height: 1.3em;
 
   ul {
-    padding-left: calc(20vw + 1.5em);
+    padding: 0 7.5vw;
     li {
       padding: 0.5em 0;
     }
   }
 }
 
-.left-menu {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 25vw;
-  left: -24vw;
-  padding: 0px;
-  box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: all ease-in 0.2s;
-
-  h1 a {
-    padding: 1em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+aside {
+  grid-area: menu;
+  background: $black;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  svg {
+    display: none;
   }
 
-  ul {
-    display: block;
-    text-transform: none;
-    font-weight: 400;
+  nav {
+    padding: 0px;
+    height: 100%;
+    overflow-y: auto;
 
-    li {
-      display: inline;
+    h1 {
+      margin: 0;
+    }
 
-      a {
-        display: block;
-        padding: 2em;
-        border-bottom: none;
-        border-left: 5px solid transparent;
-        transition: all ease-in 0.2s;
+    h1 a {
+      padding: 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        &:hover {
-          border-left-color: $plume;
+    ul {
+      display: block;
+      text-transform: none;
+      font-weight: 400;
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+
+      li {
+        display: inline;
+
+        a {
+          display: block;
+          padding: 2em;
+          border-bottom: none;
+          border-left: 5px solid transparent;
+          transition: all ease-in 0.2s;
+
+          &:hover {
+            border-left-color: $plume;
+          }
         }
       }
     }
-  }
 
-  & > ul {
-    text-transform: uppercase;
-    font-weight: 800;
-  }
+    & > ul {
+      text-transform: uppercase;
+      font-weight: 800;
+    }
 
-  & > ul > li > ul {
-    font-weight: 600;
-    & > li > a {
-      padding-left: 3em;
+    & > ul > li > ul {
+      font-weight: 600;
+      & > li > a {
+        padding: 1.5em;
+        padding-left: 3em;
+      }
+    }
+
+    & > ul > li > ul > li > ul > li > a {
+      padding: 1em;
+      padding-left: 4em;
     }
   }
+}
 
-  & > ul > li > ul > li > ul > li > a {
-    padding-left: 4em;
-  }
+main > article {
+  padding: 3em 0em;
+}
 
-  &:hover {
-    overflow-y: auto;
-    left: 0vw;
-  }
+main > article > * {
+  padding: 0 5vw;
 }
 
 .choices {
   display: flex;
+  flex-wrap: wrap;
   justify-items: stretch;
   list-style: none;
+  padding: 2em 5vw;
   & > li {
     flex: 1;
     a {
@@ -214,23 +248,63 @@ a.action {
   display: block;
   padding: 20px;
   max-width: 200px;
-  margin: 20px auto;
+  margin: 5em auto;
   border-radius: 5px;
   background: $plume;
   color: white;
 }
 
 @media screen and (max-width: 1000px) {
-  body > main > * {
+  main nav li a {
+    padding: 15px 0px;
+  }
+
+  aside svg {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 100%;
+    color: white;
+    padding: 0.5em;
+    margin: 0.5em;
+    background: $black;
+    border-radius: 5px;
+  }
+
+  body > main > article > * {
     padding: 0 5vw;
   }
 
   header {
-    padding: 10vh 20vw;
+    padding: 10vh 0vw;
     text-align: center;
   }
 
-  .left-menu {
-    display: none;
+  .cards, body > main > nav ul {
+    grid: auto-flow / 1fr;
+  }
+
+  aside {
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    transition: all ease-in 0.2s;
+  }
+
+  aside.show {
+    left: 0;
+
+    svg {
+      left: 0;
+    }
+  }
+
+  body {
+    grid-template-areas:
+      "head head head head head"
+      "cont cont cont cont cont"
+      "foot foot foot foot foot";
   }
 }

@@ -12,21 +12,28 @@
     <style><%= Rouge::Themes::Github.render(:scope => '.highlight') %></style>
   </head>
   <body>
-    <%= partial 'nav' %>
     <header>
       <h1><%= current_page.data.title %></h1>
       <p><%= current_page.data.summary %></p>
     </header>
-    <nav class="left-menu">
-        <h1><a href="/"><img src="/images/logo.svg" alt="Plume logo"><span>Plume documentation</span></a></h1>
+    <aside>
+      <i id="menu" data-feather="menu"></i>
+      <nav>
+        <h1><a href="/"><span>Plume documentation</span><img src="/images/logo.svg" alt="Plume logo"></a></h1>
 	    <% resources = sitemap.resources
 	        .select{ |p| p.path =~ /\.html/ && p.path != "index.html" }
 	        .sort { |a, b| a.path <=> b.path }
         %>
         <%= partial :nav_item, :locals => { :items => resources.select { |r| r.url.chomp('/').split('/').size == 2 }, :resources => resources } %>
-    </nav>
+      </nav>
+    </aside>
     <main>
-      <%= yield %>
+      <% if current_page.data.show_links %>
+        <%= partial 'nav' %>
+      <% end %>
+      <article>
+        <%= yield %>
+      </article>
     </main>
     <footer>
       Website and documentation under the AGPL 3.0 license.
@@ -37,4 +44,3 @@
     <%= javascript_include_tag "site" %>
   </body>
 </html>
-

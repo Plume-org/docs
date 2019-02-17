@@ -7,6 +7,7 @@ and which parts of these standards are available or not in Plume.'
 
 To federate with other Fediverse software (and itself), Plume uses various 
 protocols:
+
 - [ActivityPub](http://activitypub.rocks/), as the main federation protocol.
 - [WebFinger](https://webfinger.net/), to find other users and blog easily.
 - [HTTP Signatures](https://tools.ietf.org/id/draft-cavage-http-signatures-01.html), to 
@@ -15,6 +16,7 @@ authenticate activities.
 federation itself, but that gives some metadata about each instance.
 
 Currently, the following are federated:
+
 - User profiles
 - Blogs
 - Articles
@@ -23,6 +25,7 @@ Currently, the following are federated:
 - Reshares
 
 And these parts are not federated, but may be in the future:
+
 - Media gallery
 - Instance metadata
 
@@ -116,6 +119,7 @@ activity.
 Reshares an article (not available for other objects).
 
 Makes an user (`actor`) reshare a post (`object`).
+
 - `actor` is the ID of the user who reshared the post.
 - `object` is the ID of the post to reshare.
 
@@ -124,7 +128,8 @@ Makes an user (`actor`) reshare a post (`object`).
 Creates a new article or comment.
 
 If `object` is an `Article`:
-- `object.attibutedTo` is a list containing the ID of the authors and of the blog 
+
+- `object.attibutedTo` is a list containing the ID of the authors and of the blog
 in which this article have been published. If no blog ID is specified, the article 
 will be rejected. The `actor` of the activity corresponds to the user that clicked 
 the "Publish" button, and should normally be one of the author in `attributedTo`.
@@ -142,6 +147,7 @@ moment).
 article.
 
 If `object` is a `Note`:
+
 - `object.content` is the HTML source of the rendered comment.
 - `object.inReplyTo` is the ID of the previous comment in the thread, or of the 
 post that is commented if there is no previous comment.
