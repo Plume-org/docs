@@ -17,6 +17,12 @@ cd plume
 
 # Get the docker-compose configuration and Plume's configuration
 curl https://docs.joinplu.me/docker-compose.sample.yml > docker-compose.yml
+# If you are on an ARM machine, use the image from the Lollipop Cloud project instead
+curl https://docs.joinplu.me/docker-compose.sample.arm32v7.yml > docker-compose.yml
+# Or
+curl https://docs.joinplu.me/docker-compose.sample.arm64v8.yml > docker-compose.yml
+
+
 curl https://docs.joinplu.me/docker.sample.env > .env
 ```
 
