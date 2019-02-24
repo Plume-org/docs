@@ -12,6 +12,11 @@ Please refer to the [installation guide](/installation). Choose to compile Plume
 from source when asked. Instead of using `cargo install`, use `cargo run` which
 starts a freshly compiled debugging version of Plume.
 
+It is recommended to enable the `debug-mailer` feature, especially if you need
+emails during development. You can do it by passing the `--feature debug-mailer`
+flags to `cargo`. When enabled, mails will be logged to the standard output instead
+of being sent for real.
+
 ## Testing the federation
 
 To test the federation, you'll need to setup another database,

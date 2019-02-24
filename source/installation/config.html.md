@@ -31,6 +31,12 @@ BASE_URL=plu.me
 # Secret key used for private cookies and CSRF protection
 # You can generate one with `openssl rand -base64 32`
 ROCKET_SECRET_KEY=
+
+# Mail settings
+MAIL_SERVER=smtp.example.org
+MAIL_USER=example
+MAIL_PASSWORD=123456
+MAIL_HELO_NAME=example.org
 ```
 
 For more information about what you can put in your `.env`,

@@ -19,8 +19,14 @@ Here are the variables that Plume uses:
 - `ROCKET_SECRET_KEY`: key used to sign private cookies and for CSRF protection. If it is not set, it will be regenerated everytime you restart Plume,
 meaning that all your users will get disconnected. You can generate one with `openssl rand -base64 32`.
 
+The SMTP server to send mails can be configured with:
+
+- `MAIL_SERVER`: the SMTP server to connect to.
+- `MAIL_USER`: the username of the user that sends emails.
+- `MAIL_PASSWORD`: its password.
+- `MAIL_HELO_NAME`: the name sent during EHLO/HELO.
+
 ## Diesel
 
 Diesel, the tool we use to run migrations may be configured with the `DATABASE_URL` which should contain the URL of the
 PostgreSQL database. Otherwise, you can specify `--database-url YOUR-URL` everytime you run a `diesel` command.
-
