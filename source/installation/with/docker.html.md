@@ -35,8 +35,10 @@ Once it's done, you can finalize the installation.
 # Download the images
 docker-compose pull
 
-# Launch the database
+# Launch the database container
 docker-compose up -d postgres
+# Create the database role (it will ask you for the password)
+docker-compose run --rm postgres su postgres -c createuser plume -dP
 # Setup the database (create it and run migrations)
 docker-compose run --rm plume diesel database setup
 

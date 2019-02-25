@@ -14,5 +14,6 @@ services:
     volumes:
       - "./data/plume/static/media:/app/static/media"
       - "./.env:/app/.env"
+      - "./search_index:/app/search_index"
     ports:
       - "127.0.0.1:7878:7878"
