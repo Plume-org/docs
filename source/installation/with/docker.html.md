@@ -27,7 +27,7 @@ curl https://docs.joinplu.me/docker.sample.env > .env
 ```
 
 You should edit the freshly created `.env` file as it contains the configuration
-of your Plume instance. The two first options especially should be modified.
+of your Plume instance. The options at the top especially should be modified.
 
 Once it's done, you can finalize the installation.
 
