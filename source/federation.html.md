@@ -44,7 +44,7 @@ WebFinger informations and fetch them.
 
 ## HTTP Signatures
 
-Plume check that each incoming Activity has been signed with the `actor`'s keypair.
+Plume checks that each incoming Activity has been signed with the `actor`'s keypair.
 
 To achieve that, it uses the `Signature` HTTP header. For more details on how this 
 header is generated, please refer to the [HTTP Signatures 
@@ -105,7 +105,7 @@ Plume 0.2.0 supports the following activity types.
 
 Accepts a follow request.
 
-It will be ignored when received, as Plume considered follow requests to be 
+It will be ignored when received, as Plume considers follow requests to be 
 immediatly approved in all cases (however, this will change in the future).
 
 When a [`Follow`](#follow) activity is received, Plume will respond with this 
