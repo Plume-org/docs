@@ -9,13 +9,13 @@ To federate with other Fediverse software (and itself), Plume uses various
 protocols:
 
 - [ActivityPub](http://activitypub.rocks/), as the main federation protocol.
-- [WebFinger](https://webfinger.net/), to find other users and blog easily.
+- [WebFinger](https://webfinger.net/), to find other users and blogs easily.
 - [HTTP Signatures](https://tools.ietf.org/id/draft-cavage-http-signatures-01.html), to 
 authenticate activities.
 - [NodeInfo](http://nodeinfo.diaspora.software/), which is not part of the 
 federation itself, but that gives some metadata about each instance.
 
-Currently, the following are federated:
+Currently, the following aspects are federated:
 
 - User profiles
 - Blogs
