@@ -1,5 +1,5 @@
 ---
-title: Configuring SystemD
+title: Configuring systemd
 ---
 
 If you want to manage your Plume instance with systemd, you can use the following
