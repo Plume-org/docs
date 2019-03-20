@@ -10,7 +10,11 @@ You can install it from the [Yunohost Apps](https://yunohost.org/#/apps_en), sel
 
 or
 
-using from an SSHconnexion to your Yunohost server: 
+using from an SSH connexion to your Yunohost server: 
 ```bash 
-sudo yunohost app install
+sudo yunohost app install plume
+
+or 
+
+sudo yunohost app install https://github.com/YunoHost-Apps/plume_ynh
 ```
