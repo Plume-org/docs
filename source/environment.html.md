@@ -17,6 +17,7 @@ Here are the variables that Plume uses:
 - `ROCKET_PORT`: the port on which Plume should listen ([`7878` by default](https://twitter.com/ag_dubs/status/852559264510070784))
 - `ROCKET_SECRET_KEY`: key used to sign private cookies and for CSRF protection. If it is not set, it will be regenerated everytime you restart Plume,
 meaning that all your users will get disconnected. You can generate one with `openssl rand -base64 32`.
+- `SEARCH_INDEX`: the directory where the search index will be saved (`search_index` by default).
 
 The SMTP server to send mails can be configured with:
 
