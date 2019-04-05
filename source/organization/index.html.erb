@@ -1,0 +1,27 @@
+---
+title: Organization
+icon: calendar
+summary: 'Documents that are mostly useful for internal organization'
+show_links: yes
+---
+
+<h1>How Plume is organized</h1>
+
+<p>These pages are a collection of documents that are mostly useful for internal organization.</p>
+
+<div class="cards">
+<% sitemap.resources
+    .select{ |p| p.path =~ /\.html/ && p.path != "index.html" && p.url.chomp('/').split('/').size == 3 && p.path =~ /organization\// }
+    .sort{ |a, b| a.data.title <=> b.data.title }
+    .sort{ |a, b| -(a.data.priority || 0) <=> -(b.data.priority || 0) }
+    .each do |res|
+%>
+    <article>
+        <i data-feather="<%= res.data.icon %>"></i>
+        <h2>
+            <a href="<%= res.url %>"><%= res.data.title %></a>
+        </h2>
+        <p><%= res.data.summary %></p>
+    </article>
+<% end %>
+</div>
