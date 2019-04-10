@@ -11,7 +11,7 @@ Replace DATABASE with either postgres or sqlite depending on what you want to us
 ```bash
 git pull origin master
 cargo web deploy -p plume-front
-cargo install --force && cargo install --path plume-cli --force --features DATABASE
+cargo install --force --no-default-features --features DATABASE && cargo install --path plume-cli --force --features DATABASE
 
 # Run the migrations
 diesel migration run
