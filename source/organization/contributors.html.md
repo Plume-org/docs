@@ -29,7 +29,7 @@ Skills:
 
 **Member of the moderation team**
 
-Preferred pronouns: they/theme
+Preferred pronouns: they/them
 
 Open for mentoring: no, but feel free to ask questions when you need
 
