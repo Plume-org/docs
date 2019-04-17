@@ -60,14 +60,8 @@ nav {
 
     li {
       a {
-        display: block;
         padding: 2em 0em;
-        border-bottom: 2px solid transparent;
         transition: all ease-in 0.2s;
-
-        &:hover {
-          border-bottom-color: $plume;
-        }
       }
     }
   }
@@ -83,6 +77,12 @@ main nav li {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom-color: $plume;
+    }
+
     img {
       margin: 0px 20px;
     }
@@ -155,15 +155,17 @@ aside {
       li {
         display: inline;
 
-        a {
+        & > a, & > details {
           display: block;
           padding: 2em;
           border-bottom: none;
-          border-left: 5px solid transparent;
-          transition: all ease-in 0.2s;
+        }
+
+        & > a, & > details > summary > a {
+          opacity: 0.6;
 
           &:hover {
-            border-left-color: $plume;
+            opacity: 1;
           }
         }
       }
