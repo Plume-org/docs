@@ -25,6 +25,27 @@ Skills:
 - Tech-related: Rust, JavaScript, HTML, CSS/SCSS, Linux
 - Languages: French (native), English (not perfect), German (not good), Esperanto (still learning)
 
+# Trinity/fdb-hiroshima
+
+**Member of the moderation team**
+
+Preferred pronouns: they/theme
+
+Open for mentoring: no, but feel free to ask questions when you need
+
+Accounts:
+
+- GitHub: fdb-hiroshima
+- Matrix: @fdb_hiroshima:matrix.org
+- Fediverse: @trinity@soc.punktrash.club (Pleroma), @FDB_hiroshima@fediverse.blog (Plume)
+- Loomio: @fdbhiroshima
+- Crowdin: fdb-hiroshima
+
+Skills:
+
+- Tech-related: Rust, Linux
+- Languages: French (native), English
+
 # Want to add yourself here?
 
 You can either [do it by yourself](https://github.com/Plume-org/docs/edit/master/source/organization/contributors.html.md)
