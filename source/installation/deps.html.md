@@ -22,7 +22,7 @@ you:
     Debian, Ubuntu or another Linux ditribution based on DEB
   </a></li>
   <li><a href="/installation/deps/rpm">
-    Fedora, RHEL, CentOS or another Linux ditribution based on DEB
+    Fedora, RHEL, CentOS or another Linux ditribution based on RPM
   </a></li>
   <li><a href="/installation/deps/gentoo">
     Gentoo
