@@ -25,6 +25,26 @@ Skills:
 - Tech-related: Rust, JavaScript, HTML, CSS/SCSS, Linux
 - Languages: French (native), English (not perfect), German (not good), Esperanto (still learning)
 
+# Igor Galić
+
+**Member of the moderation team**
+
+Preferred pronouns: they/them
+
+Open for mentoring: yes
+
+Accounts:
+
+- GitHub: igalic
+- Matrix: @eenameename:matrix.org
+- Fediverse: @hirojin@dev.glitch.social (Professional), @meena@glitch.social (Personal)
+- Loomio: @meena
+
+Skills:
+
+- Tech-related: Unix, build systems, distributed systems, Ruby, Python, Rust
+- Languages: Bosnian (native), German (native), English (fluent)
+
 # Trinity/fdb-hiroshima
 
 **Member of the moderation team**
