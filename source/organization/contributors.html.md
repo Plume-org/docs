@@ -4,7 +4,7 @@ summary: 'Who contributes to Plume?'
 icon: users
 ---
 
-# Ana Gelez
+## Ana Gelez
 
 **Member of the moderation team**
 
@@ -25,7 +25,7 @@ Skills:
 - Tech-related: Rust, JavaScript, HTML, CSS/SCSS, Linux
 - Languages: French (native), English (not perfect), German (not good), Esperanto (still learning)
 
-# Igor Galić
+## Igor Galić
 
 **Member of the moderation team**
 
@@ -45,7 +45,7 @@ Skills:
 - Tech-related: Unix, build systems, distributed systems, Ruby, Python, Rust
 - Languages: Bosnian (native), German (native), English (fluent)
 
-# Trinity/fdb-hiroshima
+## Trinity/fdb-hiroshima
 
 **Member of the moderation team**
 
@@ -66,7 +66,7 @@ Skills:
 - Tech-related: Rust, Linux
 - Languages: French (native), English
 
-# Want to add yourself here?
+## Want to add yourself here?
 
 You can either [do it by yourself](https://github.com/Plume-org/docs/edit/master/source/organization/contributors.html.md)
 if you have a GitHub account, or give Ana all the required informations and she will add you (see above for contact information).

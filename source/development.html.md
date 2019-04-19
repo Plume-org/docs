@@ -80,12 +80,12 @@ plume.two:443 {
 Eventually replace the ports in the `proxy` blocks by the one of your two instances, and
 then run `caddy`. You can now open your browser and load `https://plume.one` and `https://plume.two`.
 
-# Running tests
+## Running tests
 
 To run tests of `plume-models` use `RUST_TEST_THREADS=1`, otherwise tests are run
 concurrently, which causes error because they all use the same database.
 
-# Internationalization
+## Internationalization
 
 To mark a string as translatable wrap it in the `i18n!` macro. The first argument
 should be the catalog to load translations from (usually `ctx.1` in templates), the
@@ -96,7 +96,7 @@ as the third arguments, and the number of element as the first format argument.
 
 You can find example uses of this macro [here](https://github.com/Plume-org/gettext-macros#example)
 
-# Working with the front-end
+## Working with the front-end
 
 When working with the front-end, we try limit our use of JavaScript as much as possible.
 Actually, we are not even using JavaScript since our front-end also uses Rust thanks to WebAssembly.
@@ -112,7 +112,7 @@ and not `plume(build)` (next to the progress bar).
 Also, templates are using the Ructe syntax, which is a mix of Rust and HTML. They are compiled to Rust
 and embedded in Plume, which means you have to re-run `cargo` everytime you make a change to the templates.
 
-# Code Style
+## Code Style
 
 For Rust, use the standard style. `rustfmt` can help you keeping your code clean.
 
