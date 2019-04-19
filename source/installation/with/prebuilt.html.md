@@ -21,19 +21,17 @@ mkdir -p ~/.cargo/bin
 mkdir Plume
 cd Plume
 
-# Download diesel, a tool Plume requires to manage the database
-wget -O ~/.cargo/bin/diesel TODO
-# Download plume and plm (a command line helper for Plume)
-wget -O ~/.cargo/bin/plume TODO
-wget -O ~/.cargo/bin/plume TODO
-# Download front-end files, and database migrations
-wget -O assets.tar.gz TODO
+# Download the files
+wget -O plume.tar.gz TODO
 # Extract them
 tar -xvzf assets.tar.gz
-rm assets.tar.gz
-
+mv bin/* ~/.cargo/bin/
 # Make sure they are executable
 chmod +x ~/.cargo/bin/*
+
+# Clean useless files
+rm plume.tar.gz
+rmdir bin
 
 # Add them to your path, so that you can run them (you may want to edit your ~/.bashrc too)
 PATH=$PATH:~/.cargo/bin/
