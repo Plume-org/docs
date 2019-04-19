@@ -24,9 +24,8 @@ server {
     access_log  /var/log/nginx/access.log;
     root /home/plume/Plume/ ;
 
-    SSLCertificateFile /etc/letsencrypt/live/DOMAIN_NAME/cert.pem
-    SSLCertificateKeyFile /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem
-    SSLCertificateChainFile /etc/letsencrypt/live/DOMAIN_NAME/chain.pem
+    ssl_certificate etc/letsencrypt/live/DOMAIN_NAME/chain.pem
+    ssl_certificate_key /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem
 
     # for ssl conf: https://cipherli.st/
     ssl_protocols TLSv1.2 TLSv1.3;# Requires nginx >= 1.13.0 else use TLSv1.2
@@ -46,11 +45,6 @@ server {
     add_header X-Content-Type-Options nosniff;
     add_header X-XSS-Protection "1; mode=block";
     add_header Content-Security-Policy "default-src 'self' 'unsafe-inline'; frame-ancestors 'self'; frame-src https:";
-
-    location ~*  \.(jpg|jpeg|png|gif|ico|js|pdf|wasm)$ {
-        add_header Cache-Control "public";
-        expires 7d;
-    }
 
     location / {
         proxy_pass http://localhost:7878/;
