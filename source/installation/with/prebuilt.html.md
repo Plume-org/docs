@@ -24,7 +24,7 @@ cd Plume
 # Download the files
 wget -O plume.tar.gz TODO
 # Extract them
-tar -xvzf assets.tar.gz
+tar -xvzf plume.tar.gz
 mv bin/* ~/.cargo/bin/
 # Make sure they are executable
 chmod +x ~/.cargo/bin/*
