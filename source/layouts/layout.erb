@@ -20,7 +20,7 @@
     <aside>
       <i id="menu" data-feather="menu"></i>
       <nav>
-        <h1><a href="/"><span>Plume documentation</span><img src="/images/logo.svg" alt="Plume logo"></a></h1>
+        <a href="/"><span>Plume documentation</span><img src="/images/logo.svg" alt="Plume logo"></a>
 	    <% resources = sitemap.resources
 	        .select{ |p| p.path =~ /\.html/ && p.path != "index.html" }
 	        .sort { |a, b| a.path <=> b.path }
