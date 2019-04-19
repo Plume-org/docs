@@ -22,9 +22,9 @@ mkdir Plume
 cd Plume
 
 # Download the files
-wget -O plume.tar.gz TODO
+wget -O plume.tar.gz https://github.com/Plume-org/Plume/releases/download/$PLUME_VERSION/plume-$PLUME_DB.tar.gz
 # Extract them
-tar -xvzf plume.tar.gz
+tar -xf plume.tar.gz
 mv bin/* ~/.cargo/bin/
 # Make sure they are executable
 chmod +x ~/.cargo/bin/*
