@@ -11,7 +11,7 @@ to start other program automatically and to let you manage them more easily.
   <li><a href="/installation/init/openrc">OpenRC</a></li>
 </ul>
 
-# How to know which init system I have?
+## How to know which init system I have?
 
 You can use this little script.
 

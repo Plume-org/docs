@@ -17,7 +17,7 @@ your reverse proxy in this list:
 If you don't have a reverse-proxy on your server yet but want one, we recommend
 Caddy as the configuration is really simple.
 
-# How to know which reverse proxy I have?
+## How to know which reverse proxy I have?
 
 This command should give you (most of the time) what your reverse-proxy is.
 

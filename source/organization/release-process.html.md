@@ -4,7 +4,7 @@ icon: truck
 summary: 'What we do between each releases'
 ---
 
-# Versionning
+## Versionning
 
 Plume follows semantic versionning. The 0.x series is for alpha versions. The `x` doesn't actually correspond
 to the alpha number, because `0.1.0` was before the first release, and `0.2.0` was the first alpha.
@@ -14,7 +14,7 @@ Beta versions or pre-release uses the `-rcX` suffix, where `X` is the number of 
 Major version changes when API or federation has a breaking change (they should in the same release as much as possible), not when
 major changes are made to the interface for example (even if the two are often linked).
 
-# What gets in each version
+## What gets in each version
 
 We don't set deadlines for new releases. We just assign issues (either bug to be fixed or feature requests) on GitHub to a given
 milestone as we feel it, and once it is complete, we make a new release.
@@ -23,7 +23,7 @@ milestone as we feel it, and once it is complete, we make a new release.
 
 We should prefer making small releases often, than big ones once a year or so.
 
-# The release itself
+## The release itself
 
 When we decide to make a new release, we give two weeks to translators to update translations. During this
 period bug fixes and new features are accepted, as long as they don't change the messages used in the interface.
