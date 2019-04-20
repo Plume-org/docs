@@ -41,6 +41,18 @@ Loomio is used to discuss features that need the input of the community before b
 This blog is the one we use to publish news about Plume. All release articles are published here, but
 it can also be about technical aspects of the projects, or more general announcements.
 
+## Liberapay
+
+**[Plume on Liberapay](https://liberapay.com/Plume)**
+
+We use Liberapay to receive donations.
+
+## Docker Hub
+
+**[plume-org on Docker Hub](https://hub.docker.com/u/plumeorg)**
+
+We publish x86 docker images on Docker Hub. ARM images are hosted by [Lollipop Cloud](https://lollipopcloud.solutions).
+
 ## Joining one of these places
 
 We will eventually ask you if you want to be added the GitHib organization, as a Crowdin manager, to the Matrix moderators
