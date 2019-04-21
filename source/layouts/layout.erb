@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "…" %> ⋅ Plume documentation</title>
+
+    <% if ENV['CROWDIN'] == 'on' %>
+      <script type="text/javascript">
+        var _jipt = [];
+        _jipt.push(['project', 'plume-docs']);
+        _jipt.push(['escape', function() {
+          window.location.href = 'https://docs.joinplu.me';
+        }]);
+      </script>
+      <script type="text/javascript" src="//cdn.crowdin.com/jipt/jipt.js"></script>
+    <% end %>
+
     <%= stylesheet_link_tag "site" %>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3.12.1/swagger-ui.css">
