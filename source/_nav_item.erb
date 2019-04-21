@@ -1,15 +1,26 @@
 <% if items.size > 0 %>
     <ul>
         <% items.each do |i| %>
-            <li>
-                <a href="<%= i.url %>"><%= i.data.title %></a>
-                <%= partial :nav_item, :locals => {
-                    :items => resources.select{ |r|
+            <li title="<%= i.data.summary || '' %>">
+                <% children = resources
+                    .select{ |r|
                         r.url.split("/").size == i.url.split("/").size + 1 &&
                         r.url.start_with?(i.url)
-                    },
-                    :resources => resources
-                } %>
+                    }
+                    .sort{ |a, b| a.data.title <=> b.data.title }
+                    .sort{ |a, b| -(a.data.priority || 0) <=> -(b.data.priority || 0) }
+                %>
+                <% if children.size == 0 %>
+                    <a href="<%= i.url %>"><%= i.data.title %></a>
+                <% else %>
+                    <details>
+                    <summary><a href="<%= i.url %>"><%= i.data.title %></a></summary>
+                    <%= partial :nav_item, :locals => {
+                        :items => children,
+                        :resources => resources
+                    } %>
+                    </details>
+                <% end %>
             </li>
         <% end %>
     </ul>
