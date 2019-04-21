@@ -4,7 +4,7 @@ icon: globe
 summary: 'How to interact with people, blogs and articles that are on a different instance'
 ---
 
-# Interacting with people from other instances
+## Interacting with people from other instances
 
 Due to its federated nature, other people using Plume are not necessary on the same instance as you.
 
@@ -13,7 +13,7 @@ try to interact with someone or something while not being on your instance, you 
 log in on the current instance, or to enter your full user name (in the `name@instance` format) to be redirected
 to your own instance (where you are logged in).
 
-# Entering the URL manually
+## Entering the URL manually
 
 You can also make your own instance discover other blogs or accounts by entering their URL manually.
 
@@ -26,7 +26,7 @@ it can take some time, so try to refresh the page a few times if no articles app
 note that old articles are not yet fetched when viewing a remote blog for the first time (this issue will probably
 be fixed sooner or later).
 
-# Start to federate
+## Start to federate
 
 As soon as you will have interacted with someone on another instance, this instance will be aware you exist, and
 thus will broadcast you the new activities: you will for instance see the new articles from this instance in your
