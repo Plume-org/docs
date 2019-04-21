@@ -11,6 +11,6 @@ in this list:
 <ul class="choices">
   <li><a href="with/docker">Docker</a></li>
   <li><a href="with/yunohost">YunoHost</a></li>
-  <li><a href="deps/prebuilt">Prebuilt binaries</a></li>
+  <li><a href="with/prebuilt">Prebuilt binaries</a></li>
   <li><a href="deps">From source</a></li>
 </ul>
