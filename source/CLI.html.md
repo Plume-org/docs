@@ -66,7 +66,7 @@ Initialize the search index.
 **Example:**
 
 ```bash
-plm search init -p Plume'
+plm search init -p Plume
 ```
 
 **Arguments:**
@@ -81,7 +81,7 @@ Refill the search index.
 **Example:**
 
 ```bash
-plm search refill -p Plume'
+plm search refill -p Plume
 ```
 
 **Arguments:**
@@ -96,7 +96,7 @@ Only do this if you know no processus is currently using the index.
 **Example:**
 
 ```bash
-plm search unlock -p Plume'
+plm search unlock -p Plume
 ```
 
 **Arguments:**
