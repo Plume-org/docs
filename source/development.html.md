@@ -53,7 +53,7 @@ Here is an example:
 If your function is too long, you can also put it in `plume-models`, and simply give it's full identifier in the comment:
 
 ```sql
---#! crate::my_migration_function
+--#! crate::migrations::functions::my_migration_function
 ```
 
 To run migrations, you can use `plm migration run`. To cancel and re-run them, use `plm migration redo`.
