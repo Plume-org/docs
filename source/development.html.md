@@ -17,6 +17,41 @@ emails during development. You can do it by passing the `--feature debug-mailer`
 flags to `cargo`. When enabled, mails will be logged to the standard output instead
 of being sent for real.
 
+## Migrations
+
+Migrations are files than can be used to update the database schema (for instance to add a new field to a model).
+To create new migrations you will need a tool called `diesel`, that can be installed with:
+
+```bash
+cargo install diesel_cli --no-default-features --features DATABASE --version '=1.3.0'
+```
+
+After that to create a migration, both for PostgreSQL and SQlite, you need to run these two commands:
+
+```
+MIGRATION_DIRECTORY=migrations/postgres diesel migration generate NAME
+MIGRATION_DIRECTORY=migrations/sqlite diesel migration generate NAME
+```
+
+Where `NAME` is the name you want to give to your migration, in one "word", for instance `add_role_to_users`.
+New files will be generated in `migrations/postgres` and `migrations/sqlite`, called `up.sql` and `down.sql`.
+The former should run the actual migration, and the later undo it.
+
+You can also run some Rust code in migrations, by writing it in comments starting with `#!`, and wrapped in a closure taking
+a database connection and a path to the current directory. You can access the `plume-models` modules with the `super` module.
+Here is an example:
+
+```sql
+--#!|conn: &Connection, path: &Path| {
+--#!    println!("Running a migration from {}", path);
+--#!    println!("The admin of this instance is @{}", Instance::get_local(conn).unwrap().main_admin(conn).unwrap().name());
+--#!    Ok(())
+--#!}
+
+```
+
+To run migrations, you can use `plm migration run`. To cancel and re-run them, use `plm migration redo`.
+
 ## Testing the federation
 
 To test the federation, you'll need to setup another database,
