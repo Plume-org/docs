@@ -70,7 +70,7 @@ times. Then create a copy of your `.env` file in another directory, and change t
 and `ROCKET_PORT` variables. Then copy the migration files in this new directory and run them.
 
 ```
-diesel migration run
+plm migration run
 ```
 
 Setup the new instance with `plm` [as explained here](/installation/config).

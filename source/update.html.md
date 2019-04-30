@@ -14,7 +14,7 @@ cargo web deploy -p plume-front
 cargo install --force --no-default-features --features DATABASE && cargo install --path plume-cli --force --features DATABASE
 
 # Run the migrations
-diesel migration run
+plm migration run
 
 # If you are using sysvinit
 sudo service plume restart

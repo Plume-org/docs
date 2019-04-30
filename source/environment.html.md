@@ -51,8 +51,3 @@ PLUME_LOGO_192=icons/trwnh/paragraphs/plumeParagraphs192.png
 PLUME_LOGO_256=icons/trwnh/paragraphs/plumeParagraphs256.png
 PLUME_LOGO_512=icons/trwnh/paragraphs/plumeParagraphs512.png
 ```
-
-## Diesel
-
-Diesel, the tool we use to run migrations may be configured with the `DATABASE_URL` which should contain the URL of the
-PostgreSQL database, or the path to the SQLite file. Otherwise, you can specify `--database-url YOUR-URL` everytime you run a `diesel` command.
