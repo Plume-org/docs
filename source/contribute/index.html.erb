@@ -1,0 +1,44 @@
+---
+title: Contribute to Plume
+summary: "You want to help, but you don't know how? These guides explain you how to translate Plume, hack on its source code, write documentation, etc."
+icon: heart
+priority: 2
+---
+
+<p><b>Before contributing, be sure to read and agree with our <a href="/organization/code-of-conduct">Code of conduct</a></b></p>
+
+<p>Here is a (non-exhaustive) list of how you can contribute to Plume. Some may suit you better, depending on your skills and the time you want to offer to the project</p>
+
+<div class="cards">
+<% sitemap.resources
+    .select{ |p| p.path =~ /\.html/ && p.path != "index.html" && p.url.chomp('/').split('/').size == 3 && p.path =~ /contribute\// }
+    .sort{ |a, b| a.data.title <=> b.data.title }
+    .sort{ |a, b| -(a.data.priority || 0) <=> -(b.data.priority || 0) }
+    .each do |res|
+%>
+    <article>
+        <i data-feather="<%= res.data.icon %>"></i>
+        <h2>
+            <a href="<%= res.url %>"><%= res.data.title %></a>
+        </h2>
+        <p><%= res.data.summary %></p>
+        <% if res.data.time %>
+            <small>Minimum time: <%= res.data.time %></small>
+        <% end %>
+    </article>
+<% end %>
+</div>
+
+<p>But you can also contribute differently. For instance, you could:</p>
+
+<ul>
+    <li>Talk about the project (super easy, but super helpful)</li>
+    <li>Write articles on Plume</li>
+    <li><a href="/installation">Open your own instance</a></li>
+    <li>Make a security audit</li>
+    <li>Integrate Plume with other projects. For instance you could use the <a href="/API">API</a> to make it possible to publish on Plume from your favorite writing app</li>
+</ul>
+
+<p>If you contributed to Plume, you can add yourself to the <a href="/organization/contributors">contributors page</a> if you want.</p>
+
+<p>If you ever encounter some difficulties while trying to contribute, please <a href="/contribute/discussion">tell us</a>, we will be happy to help you.</p>
