@@ -8,6 +8,9 @@ time: 10 minutes
 Discussion about Plume mostly take place on two websites: Loomio (long posts, more like a forum with decision tools) and Matrix
 (instant chat, more suited for support or feedback).
 
+Most of the discussions are in English, but if you are not fluent enough, you can speak in another language your are more comfortable
+with, maybe we speak it too, and even if we don't we will find ways to talk with you, don't worry!
+
 ## Joining the Matrix room
 
 Matrix is federated chat (but it doesn't use ActivityPub 😛). If you don't have an account yet, you
