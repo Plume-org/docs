@@ -43,11 +43,10 @@ For more information about what you can put in your `.env`,
 see [the documentation about environment variables](/environment).
 
 Now we need to run migrations. Migrations are scripts used to update
-the database. They are run by `diesel` that we previously installed.
-To run the migrations, you can do:
+the database. To run the migrations, you can do:
 
 ```bash
-diesel migration run
+plm migration run
 ```
 
 Migrations should be run after each update. When in doubt, run them.
