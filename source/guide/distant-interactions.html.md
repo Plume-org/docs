@@ -16,7 +16,7 @@ to your own instance (where you are logged in).
 
 ## Entering the URL manually
 
-You can also make your own instance discover other blogs or accounts by entering their URL manually.
+You can also make your own instance discover other blogs, or accounts by entering their URL manually.
 
 The URL to enter for distant profiles is `https://your.instance/@/name@other.instance`.
 For blogs it is `https://your.instance/~/name@other.instance`
@@ -29,6 +29,9 @@ Also note that old articles are not yet fetched when viewing a remote blog for t
 
 ## Start to federate
 
-As soon as you will have interacted with someone on another instance, this instance will be aware you exist,
-and thus will broadcast you the new activities: you will for instance see the new articles from this
+As soon as you will have interacted with someone on another instance (e.g. by subscribing), this remote instance will discover that you exist, and thus will broadcast you the new activities: you will for instance see the new articles from this
 instance in your federated feed.
+
+## Other platforms that Plume federates with
+
+Apart from Plume-to-Plume interactions, Plume federates with other ActivityPub software. As of version 0.3.0, federation is working reliably with Mastodon, Peertube, Pixelfed, Pleroma, Friendica and WriteFreely.
