@@ -39,6 +39,7 @@ Apart from Plume-to-Plume interactions, Plume federates with other ActivityPub s
 - _Peertube_,
 - _Pixelfed_,
 - _Pleroma_,
+- _pubgate_,
 - _Friendica_,
-- _Funkwhale_, and
+- _Funkwhale_ and
   _WriteFreely_.
