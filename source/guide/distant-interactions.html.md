@@ -29,9 +29,16 @@ Also note that old articles are not yet fetched when viewing a remote blog for t
 
 ## Start to federate
 
-As soon as you will have interacted with someone on another instance (e.g. by subscribing), this remote instance will discover that you exist, and thus will broadcast you the new activities: you will for instance see the new articles from this
+As soon as you will have interacted with someone on another instance (i.e. by subscribing), this remote instance will discover that you exist, and thus will broadcast you the new activities from it: you will for instance see the new articles from this
 instance in your federated feed.
 
 ## Other platforms that Plume federates with
 
-Apart from Plume-to-Plume interactions, Plume federates with other ActivityPub software. As of version 0.3.0, federation is working reliably with Mastodon, Peertube, Pixelfed, Pleroma, Friendica and WriteFreely.
+Apart from Plume-to-Plume interactions, Plume federates with other ActivityPub software. As of version _0.3.0_, federation is working reliably with:
+- _Mastodon_, 
+- _Peertube_,
+- _Pixelfed_,
+- _Pleroma_,
+- _Friendica_,
+- _Funkwhale_, and
+  _WriteFreely_.
