@@ -34,8 +34,10 @@ instance in your federated feed.
 
 ## Other platforms that Plume federates with
 
-Apart from Plume-to-Plume interactions, Plume federates with other ActivityPub software. As of version _0.3.0_, federation is working reliably with:
-- _Mastodon_, 
+Apart from Plume-to-Plume interactions, Plume federates with other ActivityPub software.
+As of version _0.3.0_, federation is working reliably with:
+- _Mastodon_,
+- _Misskey_,
 - _Peertube_,
 - _Pixelfed_,
 - _Pleroma_,
