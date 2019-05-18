@@ -29,4 +29,4 @@ Also note that old articles are not yet fetched when viewing a remote blog for t
 
 ## Start to federate
 
-As soon as you start an interaction with someone on another server (i.e. by subscribing to them), their instance will discover that you exist, and thus will broadcast you new articles from its feed now. You will then be able to see those in your federated feed.
+As soon as you start an interaction with someone on another server (i.e. by subscribing to them), their instance will discover that you exist, and thus will broadcast the articles from its feed to you. You will then be able to see those in your federated feed.
