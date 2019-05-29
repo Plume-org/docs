@@ -20,4 +20,4 @@ tab, click the green "New issue" button, and describe your problem.
 
 If you don't have a GitHub account, and don't want to create one, you can also report your issue on Matrix.
 Join the Plume room as explained in [this guide](/contribute/discussion), and send a message explaining what is wrong.
-We will take of creating an issue on GitHub for you.
+We will take care of creating an issue on GitHub for you.
