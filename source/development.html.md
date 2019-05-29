@@ -135,7 +135,11 @@ second the string to translate. You can specify format arguments after a `;`.
 If your string vary depending on the number of elements, provide the plural version
 as the third arguments, and the number of element as the first format argument.
 
-You can find example uses of this macro [here](https://github.com/Plume-org/gettext-macros#example)
+You can find example uses of this macro [here](https://github.com/Plume-org/gettext-macros#example).
+
+There is no need to provide individual translations of  `i18n!`-wrapped strings in pull requests.
+The strings will be uploaded to a third-party web service and translated automatically as
+a separate step.
 
 ## Working with the front-end
 
