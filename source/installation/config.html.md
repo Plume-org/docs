@@ -37,6 +37,7 @@ MAIL_SERVER=smtp.example.org
 MAIL_USER=example
 MAIL_PASSWORD=123456
 MAIL_HELO_NAME=example.org
+MAIL_ADDRESS=from@example.org
 ```
 
 For more information about what you can put in your `.env`,

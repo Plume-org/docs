@@ -22,9 +22,10 @@ meaning that all your users will get disconnected. You can generate one with `op
 The SMTP server to send mails can be configured with:
 
 - `MAIL_SERVER`: the SMTP server to connect to.
-- `MAIL_USER`: the username of the user that sends emails.
+- `MAIL_USER`: the username for authentication purposes.
 - `MAIL_PASSWORD`: its password.
 - `MAIL_HELO_NAME`: the name sent during EHLO/HELO.
+- `MAIL_ADDRESS`: the address that emails will be sent from.
 
 You can also change the logo you want to use for your instance in this file. Your logo should be in the `static` directory.
 To make Plume load it, you can use:
