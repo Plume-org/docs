@@ -3,8 +3,23 @@ title: Development Guide
 icon: git-merge
 summary: 'How to install Plume on your computer and make changes to the source code.
 This guide also gives you tips for making debugging and testing easier.'
-priority: 2
+time: 30 minutes
 ---
+
+Plume is mostly made in Rust. The back-end uses Rocket and Diesel. The front-end
+is in Rust too, thanks to WebAssembly. The stylesheets are written in SCSS.
+
+If you want to write some code but you don't really know where to start, you
+can try to find [an issue that interests you](https://github.com/Plume-org/Plume/issues).
+
+Then, fork Plume (if you didn't already do it), `git clone` your fork, and start a
+new branch with `git checkout -b NAME-OF-THE-BRANCH`. You can now start to work on the
+issue.
+
+Once you have something working, do `git add FILES THAT YOU CHANGED` (or `git add .` to add them all),
+and then `git commit`. Write a message explaining your changes, and do `git push origin NAME-OF-THE-BRANCH`
+to upload your work to GitHub. Open the URL that appears in the output of this last command to open
+a pull request, that we will then review, and eventually merge.
 
 ## Installing the development environment
 
