@@ -22,9 +22,10 @@ meaning that all your users will get disconnected. You can generate one with `op
 The SMTP server to send mails can be configured with:
 
 - `MAIL_SERVER`: the SMTP server to connect to.
-- `MAIL_USER`: the username of the user that sends emails.
+- `MAIL_USER`: the username for authentication purposes.
 - `MAIL_PASSWORD`: its password.
 - `MAIL_HELO_NAME`: the name sent during EHLO/HELO.
+- `MAIL_ADDRESS`: the address that emails will be sent from.
 
 You can also change the logo you want to use for your instance in this file. Your logo should be in the `static` directory.
 To make Plume load it, you can use:
@@ -51,8 +52,3 @@ PLUME_LOGO_192=icons/trwnh/paragraphs/plumeParagraphs192.png
 PLUME_LOGO_256=icons/trwnh/paragraphs/plumeParagraphs256.png
 PLUME_LOGO_512=icons/trwnh/paragraphs/plumeParagraphs512.png
 ```
-
-## Diesel
-
-Diesel, the tool we use to run migrations may be configured with the `DATABASE_URL` which should contain the URL of the
-PostgreSQL database, or the path to the SQLite file. Otherwise, you can specify `--database-url YOUR-URL` everytime you run a `diesel` command.

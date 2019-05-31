@@ -102,3 +102,35 @@ plm search unlock -p Plume
 **Arguments:**
 
 - `--path`, `-n`: path to plume working directory.
+
+## `plm migration`
+
+Manage migrations.
+
+### `plm migration run`
+
+Run migrations.
+
+**Example:**
+
+```bash
+plm migration run -p Plume
+```
+
+**Arguments:**
+
+- `--path`, `-p`: path to Plume working directory.
+
+### `plm migration redo`
+
+Rerun latest migration.
+
+**Example:**
+
+```bash
+plm migration redo -p Plume
+```
+
+**Arguments:**
+
+- `--path`, `-p`: path to Plume working directory.

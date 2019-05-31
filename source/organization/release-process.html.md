@@ -34,6 +34,7 @@ messages that were added during the cycle.
 At the end of these two weeks, the updated `.po` get pulled in the main code repository.
 
 We should make sure the documentation is up-to-date before publishing a release.
+The `dev` branch of the docs should be merged into `stable` to be deployed on [docs.joinplu.me](https://docs.joinplu.me).
 
 For each release, we make an announcement as a blog post (on Plume of course), a message on the Matrix room,
 and a more technical/impersonal changelog on the GitHub release page (basically a list of the PR that were merged

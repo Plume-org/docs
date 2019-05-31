@@ -3,8 +3,23 @@ title: Development Guide
 icon: git-merge
 summary: 'How to install Plume on your computer and make changes to the source code.
 This guide also gives you tips for making debugging and testing easier.'
-priority: 2
+time: 30 minutes
 ---
+
+Plume is mostly made in Rust. The back-end uses Rocket and Diesel. The front-end
+is in Rust too, thanks to WebAssembly. The stylesheets are written in SCSS.
+
+If you want to write some code but you don't really know where to start, you
+can try to find [an issue that interests you](https://github.com/Plume-org/Plume/issues).
+
+Then, fork Plume (if you didn't already do it), `git clone` your fork, and start a
+new branch with `git checkout -b NAME-OF-THE-BRANCH`. You can now start to work on the
+issue.
+
+Once you have something working, do `git add FILES THAT YOU CHANGED` (or `git add .` to add them all),
+and then `git commit`. Write a message explaining your changes, and do `git push origin NAME-OF-THE-BRANCH`
+to upload your work to GitHub. Open the URL that appears in the output of this last command to open
+a pull request, that we will then review, and eventually merge.
 
 ## Installing the development environment
 
@@ -16,6 +31,47 @@ It is recommended to enable the `debug-mailer` feature, especially if you need
 emails during development. You can do it by passing the `--feature debug-mailer`
 flags to `cargo`. When enabled, mails will be logged to the standard output instead
 of being sent for real.
+
+## Migrations
+
+Migrations are files than can be used to update the database schema (for instance to add a new field to a model).
+To create new migrations you will need a tool called `diesel`, that can be installed with:
+
+```bash
+cargo install diesel_cli --no-default-features --features DATABASE --version '=1.3.0'
+```
+
+After that to create a migration, both for PostgreSQL and SQlite, you need to run these two commands:
+
+```
+MIGRATION_DIRECTORY=migrations/postgres diesel migration generate NAME
+MIGRATION_DIRECTORY=migrations/sqlite diesel migration generate NAME
+```
+
+Where `NAME` is the name you want to give to your migration, in one "word", for instance `add_role_to_users`.
+New files will be generated in `migrations/postgres` and `migrations/sqlite`, called `up.sql` and `down.sql`.
+The former should run the actual migration, and the later undo it.
+
+You can also run some Rust code in migrations, by writing it in comments starting with `#!`, and wrapped in a closure taking
+a database connection and a path to the current directory. You can access the `plume-models` modules with the `super` module.
+Here is an example:
+
+```sql
+--#!|conn: &Connection, path: &Path| {
+--#!    println!("Running a migration from {}", path);
+--#!    println!("The admin of this instance is @{}", Instance::get_local(conn).unwrap().main_admin(conn).unwrap().name());
+--#!    Ok(())
+--#!}
+
+```
+
+If your function is too long, you can also put it in `plume-models`, and simply give it's full identifier in the comment:
+
+```sql
+--#! crate::migrations::functions::my_migration_function
+```
+
+To run migrations, you can use `plm migration run`. To cancel and re-run them, use `plm migration redo`.
 
 ## Testing the federation
 
@@ -29,7 +85,7 @@ times. Then create a copy of your `.env` file in another directory, and change t
 and `ROCKET_PORT` variables. Then copy the migration files in this new directory and run them.
 
 ```
-diesel migration run
+plm migration run
 ```
 
 Setup the new instance with `plm` [as explained here](/installation/config).
@@ -94,7 +150,11 @@ second the string to translate. You can specify format arguments after a `;`.
 If your string vary depending on the number of elements, provide the plural version
 as the third arguments, and the number of element as the first format argument.
 
-You can find example uses of this macro [here](https://github.com/Plume-org/gettext-macros#example)
+You can find example uses of this macro [here](https://github.com/Plume-org/gettext-macros#example).
+
+There is no need to provide individual translations of  `i18n!`-wrapped strings in pull requests.
+The strings will be uploaded to a third-party web service and translated automatically as
+a separate step.
 
 ## Working with the front-end
 
