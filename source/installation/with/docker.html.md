@@ -41,7 +41,7 @@ docker-compose up -d postgres
 docker-compose run --rm postgres su postgres -c 'createuser plume -dP'
 # Setup the database (create it and run migrations)
 docker-compose run --rm postgres su postgres -c 'createdb plume -O plume'
-docker-compose run --rm plume plm database setup
+docker-compose run --rm plume plm migration run
 
 # Setup your instance
 docker-compose run --rm plume plm instance new
