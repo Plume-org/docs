@@ -8,7 +8,7 @@ services:
     volumes:
       - "./data/postgres:/var/lib/postgresql/data"
   plume:
-    image: plumeorg/plume:v0.3.0
+    image: plumeorg/plume:latest
     env_file: .env
     restart: unless-stopped
     volumes:
