@@ -37,10 +37,8 @@ docker-compose pull
 
 # Launch the database container
 docker-compose up -d postgres
-# Create the database role (it will ask you for the password)
-docker-compose run --rm postgres su postgres -c 'createuser plume -dP'
-# Setup the database (create it and run migrations)
-docker-compose run --rm postgres su postgres -c 'createdb plume -O plume'
+# Wait for postgres init (user docker-compose logs to get postgres output)
+# Database setup, first migration run
 docker-compose run --rm plume plm migration run
 
 # Setup your instance
