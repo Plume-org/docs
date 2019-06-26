@@ -42,8 +42,8 @@ docker-compose up -d postgres
 docker-compose run --rm plume plm migration run
 
 # Setup your instance
-docker-compose run --rm plume plm instance new
-docker-compose run --rm plume plm users new --admin
+docker-compose run --rm plume plm instance new -d 'domain.name' -n 'instance name' -l 'default licence'
+docker-compose run --rm plume plm users new -n 'admin' -N 'name' -b 'bio' -e 'admin@domain.name' -p 'pass' --admin
 docker-compose run --rm plume plm search init
 
 # Launch your instance for good
