@@ -7,11 +7,11 @@ With [Homebrew](https://brew.sh/):
 ```bash
 brew update
 
-# For PostgreSQL
-brew install postgres gettext git
+brew install git
+brew link gettext --force
 
-# For SQlite (already present, so only GetText and Git are needed)
-brew install gettext git
+# Additionally, only for PostgreSQL
+brew install postgres
 ```
 
 Now that these dependencies have been installed, we need to install Rust which has a special installer.
