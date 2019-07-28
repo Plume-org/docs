@@ -14,7 +14,7 @@ Run the following commands.
 
 ```bash
 # Replace DATABASE with either postgres or sqlite depending on what you want to use
-cargo install diesel_cli --no-default-features --features DATABASE --version '=1.3.0'
+cargo +stable install diesel_cli --no-default-features --features DATABASE --version '=1.3.0'
 
 # Build the front-end
 cargo install cargo-web
