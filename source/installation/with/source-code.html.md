@@ -15,7 +15,7 @@ Run the following commands.
 ```bash
 # Build the front-end
 cargo install cargo-web
-cargo web deploy -p plume-front
+cargo web deploy -p plume-front --release
 
 # Build the back-end, replacing DATABASE either with
 # postgres or sqlite depending on what you want to use
