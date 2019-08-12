@@ -24,8 +24,8 @@ server {
     access_log  /var/log/nginx/access.log;
     root /home/plume/Plume/ ;
 
-    ssl_certificate etc/letsencrypt/live/DOMAIN_NAME/chain.pem
-    ssl_certificate_key /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem
+    ssl_certificate /etc/letsencrypt/live/DOMAIN_NAME/chain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem;
 
     # for ssl conf: https://cipherli.st/
     ssl_protocols TLSv1.2 TLSv1.3;# Requires nginx >= 1.13.0 else use TLSv1.2
