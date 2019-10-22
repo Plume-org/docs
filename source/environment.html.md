@@ -27,6 +27,9 @@ The SMTP server to send mails can be configured with:
 - `MAIL_HELO_NAME`: the name sent during EHLO/HELO.
 - `MAIL_ADDRESS`: the address that emails will be sent from.
 
+For the moment, Plume only sends mail when you need to reset your password (and only from the web interface, `plm users reset-password` doesn't send anything).
+If you don't plan to use this feature, you can simply remove (or comment) the lines to configure the mail server in your `.env`.
+
 You can also change the logo you want to use for your instance in this file. Your logo should be in the `static` directory.
 To make Plume load it, you can use:
 
