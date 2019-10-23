@@ -33,6 +33,9 @@ BASE_URL=plu.me
 ROCKET_SECRET_KEY=
 
 # Mail settings
+# If you don't want to setup a mail server and/or address for plume
+# and don't plan to use the "password reset" feature,
+# you can comment these lines.
 MAIL_SERVER=smtp.example.org
 MAIL_USER=example
 MAIL_PASSWORD=123456
