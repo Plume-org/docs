@@ -13,6 +13,7 @@ createdb -O plume plume
 
 Before starting Plume, you'll need to create a configuration file, called `.env`.
 This file should be in the same directory as the one in which you will start Plume (`~/Plume`, if you followed the previous instructions).
+If you are installing from source, you can use `cp .env.sample .env` to generate it.
 Here is a sample of what you should put inside.
 
 ```bash
