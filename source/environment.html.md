@@ -18,6 +18,7 @@ Here are the variables that Plume uses:
 - `ROCKET_SECRET_KEY`: key used to sign private cookies and for CSRF protection. If it is not set, it will be regenerated everytime you restart Plume,
 meaning that all your users will get disconnected. You can generate one with `openssl rand -base64 32`.
 - `SEARCH_INDEX`: the directory where the search index will be saved (`search_index` by default).
+- `MEDIA_UPLOAD_DIRECTORY`: the directory in which to store the uploaded medias (`./static/media` by default). Plume won't create this directory if it doesn't exist, so make sure to create it before.
 
 The SMTP server to send mails can be configured with:
 
