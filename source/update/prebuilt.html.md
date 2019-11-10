@@ -2,6 +2,8 @@
 title: Updating pre-built binaries
 ---
 
+Prebuilt binaries are only available for 64 bits Linux machines.
+
 You'll need to define these two variables in your shell first:
 
 - `PLUME_VERSION`: the Plume version to install. The latest is `0.4.0-alpha-4`.
