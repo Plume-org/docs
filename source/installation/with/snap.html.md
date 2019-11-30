@@ -2,9 +2,13 @@
 title: Installing from the Snap store
 ---
 
-Plume is available on the [Snap Store](https://snapcraft.io/plume). The snap package is
-isolated from your host and will automatically update, running any necessary migration
+Plume is available on the [Snap Store](https://snapcraft.io/plume).
+The snap package is isolated from your host and will automatically update, running any necessary migration
 tasks.
+
+If you already have `snapd` installed, you can install Plume with `sudo snap install --edge plume`.
+More information, including instructions for installing `snapd` on your distro, can be found
+on Plume's entry on the [Snap Store](https://snapcraft.io/plume).
 
 ### Configuring the Plume snap
 
