@@ -57,17 +57,17 @@ plm migration run
 
 Migrations should be run after each update. When in doubt, run them.
 
+You will also need to initialise search index:
+
+```
+plm search init
+```
+
 After that, you'll need to setup your instance, and the admin's account.
 
 ```
 plm instance new
 plm users new --admin
-```
-
-You will also need to initialise search index
-
-```
-plm search init
 ```
 
 For more information about these commands, and the arguments you can give them,
