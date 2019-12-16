@@ -25,40 +25,145 @@ paths:
           The post exists, but you don't have the rights to fetch it (it is probably a private draft)
         '404':
           The post was not found
+    delete:
+      Deletes the post corresponding to this ID.
   /posts/:
     get:
       description:
         List posts.
+      parameters:
+        - name: title
+          in: path
+          description: Only list article with this specific title
+          required: false
+          schema:
+            type: string
+        - name: subtitle
+          in: path
+          description: Only list article with this specific subtitle
+          required: false
+          schema:
+            type: string
+        - name: content
+          in: path
+          description: Only list article with this specific content (in HTML)
+          required: false
+          schema:
+            type: string
+    post:
+      description:
+        Creates a new post.
+      requestBody:
+        content:
+          'application/json':
+            schema:
+             properties:
+               title:
+                 description: The title of the new article.
+                 type: string
+               subtitle:
+                 description: The subtitle of the new article.
+                 type: string
+               source:
+                 description: The markdown source of the new article.
+                 type: string
+               blog_id:
+                 description: The ID of the blog in which to publish the new article.
+                 type: integer
+               published:
+                 description: false if this article is a draft, true if it is published.
+                 type: bool
+               creation_date:
+                 description: The publication of this article. Past dates will work, but not futures ones. Defaults to the current date. The expected format is %Y-%m-%d.
+                 type: string
+               license:
+                 description: The license of the article. Omit this field to use the default one for this instance. Leave it empty to reserve all rights.
+                 type: string
+               tags:
+                 description: The tags for the new article.
+                 type: array
+               cover_id:
+                 description: The ID of the cover image.
+                 type: integer
+             required:
+               - title
+               - description
+               - author
 
 definitions:
   App:
-    type: "object"
+    type: object
     properties:
       name:
-        type: "string"
+        description: The name of the app.
+        type: string
         example: "My app"
       website:
-        type: "string"
+        description: The website of the app.
+        type: string
         example: "https://my.app"
       client_id:
-        type: "string"
-        example: "My app"
+        description: A unique identifier for the app.
+        type: string
+        example: "abcdef0123456789"
       client_secret:
-        type: "string"
-        example: "My app"
+        description: The secret token associated to this app. It will be used to get individual authentication tokens for each user of the app.
+        type: string
+        example: "abcdef0123456789"
   Post:
-    type: "object"
+    type: object
     properties:
-      title:
-        type: "string"
-        example: "Hello, world!"
       id:
-        type: "integer"
-        format: "int64"
-        example: 42
+        description: The internal ID of the post.
+        type: integer
+        example: 3
+      title:
+        description: The title of the post.
+        type: string
+        example: "Hello, world!"
       subtitle:
-        type: "string"
+        description: The subtitle of the post.
+        type: string
         example: "My first post."
       content:
-        type: "string"
-        format: "<p>This is my first post. Thanks for reading.</p>"
+        description: The content of the post, rendered as HTML.
+        type: string
+        format: "<p>This is my first <b>post</b>. Thanks for reading.</p>"
+      source:
+        description: The markdown source of the post.
+        type: string
+        example: "This is my first **post**. Thanks for reading."
+      authors:
+        description: The FQNs of the authors of this post.
+        type: array
+        example:
+          - "alice"
+          - "bob@plume.one"
+      blog_id:
+        description: The ID of the blog in which this article was published.
+        type: integer
+        example: 12
+      published:
+        description: true if the article is published, false if it is still a draft.
+        type: bool
+        example: true
+      creation_date:
+        description: The publication date.
+        type: string
+        example: "2019-12-16"
+      license:
+        description: The license of this post.
+        type: string
+        example: "CC-BY-SA"
+      tags:
+        description: The tags of this post.
+        type: array
+        example:
+          - Plume
+          - REST
+          - API
+          - JSON
+      cover_id:
+        description: The ID of the media used as cover for this article.
+        type: integer
+        example: 42
