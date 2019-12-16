@@ -117,7 +117,7 @@ plm search unlock -p Plume
 
 **Arguments:**
 
-- `--path`, `-n`: path to Plume's working directory.
+- `--path`, `-p`: path to Plume's working directory.
 
 ## `plm migration`
 
