@@ -2,7 +2,7 @@
 title: Installing Rust & Cargo
 ---
 
-TODO: instructions to choose the correct nightly directly?
+<!-- TODO: instructions to choose the correct nightly directly? -->
 
 Rust and Cargo use a special installer called *RustUp* that let's you manage
 various versions of these two programs in parallel.

@@ -9,7 +9,7 @@ You will need to have `wget` installed for this method to work.
 
 To download and install the latest release, first define the following variables in your shell:
 
-- `PLUME_VERSION`: the Plume version to install. The latest is `0.3.0-alpha-2`.
+- `PLUME_VERSION`: the Plume version to install. The latest is `0.4.0-alpha-4`.
 - `PLUME_DB`: the database backend to use. Either `postgres` or `sqlite`.
 
 Then run these commands:

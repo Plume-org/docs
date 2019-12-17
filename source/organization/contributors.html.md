@@ -70,5 +70,3 @@ Skills:
 
 You can either [do it by yourself](https://github.com/Plume-org/docs/edit/master/source/organization/contributors.html.md)
 if you have a GitHub account, or give Ana all the required informations and she will add you (see above for contact information).
-
-Please keep the list alphabetically ordered.

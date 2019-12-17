@@ -8,6 +8,7 @@ summary: 'What we do between each releases'
 
 Plume follows semantic versionning. The 0.x series is for alpha versions. The `x` doesn't actually correspond
 to the alpha number, because `0.1.0` was before the first release, and `0.2.0` was the first alpha.
+This has been fixed with the fourth alpha, which is the `0.4.0` version, by skipping the third alpha.
 
 Beta versions or pre-release uses the `-rcX` suffix, where `X` is the number of the release canditate.
 
