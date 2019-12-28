@@ -7,7 +7,7 @@ With [Homebrew](https://brew.sh/):
 ```bash
 brew update
 
-brew install git
+brew install git llvm
 brew link gettext --force
 
 # Additionally, only for PostgreSQL
