@@ -16,13 +16,13 @@ want to use.
 If you want **PostgreSQL**, use:
 
 ```
-apt install postgresql postgresql-contrib libpq-dev gettext git curl gcc make openssl libssl-dev pkg-config
+apt install postgresql postgresql-contrib libpq-dev gettext git curl gcc make openssl libssl-dev pkg-config libclang-dev
 ```
 
 If you prefer to use **SQlite**:
 
 ```
-apt install libsqlite3-dev gettext git curl gcc make openssl libssl-dev pkg-config
+apt install libsqlite3-dev gettext git curl gcc make openssl libssl-dev pkg-config libclang-dev
 ```
 
 Now that these dependencies have been installed, we need to install Rust which has a special installer.
