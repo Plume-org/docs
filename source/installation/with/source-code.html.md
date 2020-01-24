@@ -51,7 +51,7 @@ cargo +stable install diesel_cli --no-default-features --features sqlite --versi
 cargo install cargo-web
 cargo web deploy -p plume-front --release
 
-# Copy sqlite3.lib from the stable versionn of RustUp to the nightly that was just installed
+# Copy sqlite3.lib from the stable version of RustUp to the nightly that was just installed
 copy C:\Users\%USERNAME%\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib\sqlite3.lib C:\Users\%USERNAME%\.rustup\toolchains\nightly-2020-01-15-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib\sqlite3.lib
 
 # Build the back-end, replacing DATABASE either with
