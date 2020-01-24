@@ -41,7 +41,7 @@ lib /MACHINE:x64 /def:sqlite3.def /out:sqlite3.lib
 copy C:\ProgramData\chocolatey\lib\SQLite\tools\sqlite3.lib C:\Users\%USERNAME%\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib\sqlite3.lib
 ```
 
-Now you can proceed with the regularly scheduled installation:
+You may close that cmd.exe window and proceed with your regularly scheduled installation:
 
 ```
 # Install diesel_cli 
