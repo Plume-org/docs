@@ -9,6 +9,7 @@ to start other program automatically and to let you manage them more easily.
   <li><a href="/installation/init/systemd">SystemD</a></li>
   <li><a href="/installation/init/sysvinit">SysVInit</a></li>
   <li><a href="/installation/init/openrc">OpenRC</a></li>
+  <li><a href="/installation/init/taskscheduler">Task Scheduler</a></li>
 </ul>
 
 ## How to know which init system I have?

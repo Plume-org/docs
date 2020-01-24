@@ -11,6 +11,7 @@ your reverse proxy in this list:
   <li><a href="/installation/proxy/caddy">Caddy</a></li>
   <li><a href="/installation/proxy/nginx">Nginx</a></li>
   <li><a href="/installation/proxy/apache">Apache</a></li>
+  <li><a href="/installation/proxy/iis">IIS</a></li>
   <li><a href="/installation/proxy/none">No reverse-proxy</a></li>
 </ul>
 

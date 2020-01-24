@@ -32,6 +32,10 @@ SSLStaplingCache "shmcb:logs/stapling-cache(150000)"
     # Requires Apache >= 2.4.11
     SSLSessionTickets Off
 
+    # Disable http/1.0
+    # Requires Apache >= 2.4.17
+    Protocols h2 http/1.1
+
     SSLCertificateFile /etc/letsencrypt/live/DOMAIN_NAME/cert.pem
     SSLCertificateKeyFile /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem
     SSLCertificateChainFile /etc/letsencrypt/live/DOMAIN_NAME/chain.pem
