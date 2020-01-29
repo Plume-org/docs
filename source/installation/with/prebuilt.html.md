@@ -2,7 +2,7 @@
 title: Installing pre-built binaries
 ---
 
-This installation method is only available for 64 bits Linux machines. Pre-built binairies
+This installation method is only available for 64 bits Linux machines. Pre-built binaries
 for other platforms may come in the future.
 
 You will need to have `wget` installed for this method to work.
