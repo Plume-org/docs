@@ -3,7 +3,8 @@ title: Choose your init system
 ---
 
 The init system is the first program to start when a computer boots. Its role is
-to start other program automatically and to let you manage them more easily.
+to start other program automatically and to let you manage them more easily. The
+recommended option for Windows is Task Scheduler.
 
 <ul class="choices">
   <li><a href="/installation/init/systemd">SystemD</a></li>

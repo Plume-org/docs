@@ -14,9 +14,9 @@ adding PostgreSQL in the future.
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
-4. Download and install [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html) (I installed to C:\Extra\ssl)
+4. Download and install [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html) (i.e. C:\Extra\ssl)
 5. Create new system variable called "OPENSSL_DIR" with a value of `C:\Extra\ssl` (or wherever you installed OpenSSL **NOTE**: this is _not_ to the bin folder, it must be to root to get the bin and lib folders!)
-6. Download and install [LLVM (libclang)](http://releases.llvm.org/9.0.0/LLVM-9.0.0-win64.exe) I installed to C:\Extra\LLVM
+6. Download and install [LLVM (libclang)](http://releases.llvm.org/9.0.0/LLVM-9.0.0-win64.exe) (i.e. C:\Extra\LLVM)
 7. Create new system variable called "LIBCLANG_PATH" with a value of `C:\Extra\LLVM\bin` (or wherever you installed LLVM to)
 8. Reboot your PC to continue
 

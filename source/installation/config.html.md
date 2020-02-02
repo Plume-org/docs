@@ -14,14 +14,14 @@ createdb -O plume plume
 Before starting Plume, you'll need to create a configuration file, called `.env`.
 This file should be in the same directory as the one in which you will start Plume (`~/Plume`, if you followed the previous instructions).
 If you are installing from source, you can use `cp .env.sample .env` to generate it.
-Here is a sample of what you should put inside.
+Here is a sample of what you should put inside for **GNU/Linux** and **Mac OS X** systems.
 
 ```bash
 # The address of the database
 # (replace USER, PASSWORD, PORT and DATABASE_NAME with your values)
 #
-# If you are using SQlite, use the full path of the database file with forward slashes (`plume.db` for instance)
-#DATABASE_URL=C:/path/to/Plume/plume.db
+# If you are using SQlite, use the full path of the database file (`plume.db` for instance)
+#DATABASE_URL=\etc\path\to\Plume\plume.db
 DATABASE_URL=postgres://USER:PASSWORD@IP:PORT/DATABASE_NAME
 
 # For PostgreSQL: migrations/postgres
@@ -44,18 +44,13 @@ MAIL_USER=example
 MAIL_PASSWORD=123456
 MAIL_HELO_NAME=example.org
 MAIL_ADDRESS=from@example.org
+```
 
-# Custom icons
-#PLUME_LOGO=icons/custom/plume.png
-#PLUME_LOGO_FAVICON=icons/custom/plume32.png
-#PLUME_LOGO_48=icons/custom/plume48.png
-#PLUME_LOGO_72=icons/custom/plume72.png
-#PLUME_LOGO_96=icons/custom/plume96.png
-#PLUME_LOGO_144=icons/custom/plume144.png
-#PLUME_LOGO_160=icons/custom/plume160.png
-#PLUME_LOGO_192=icons/custom/plume192.png
-#PLUME_LOGO_256=icons/custom/plume256.png
-#PLUME_LOGO_512=icons/custom/plume512.png
+For **Windows** systems, everything is the same, unless you are using SQLite for your database, then you will need to change your paths
+from backslashes (\) to forward slashes (/) else you will receive error.
+
+```
+DATABASE_URL=C:/path/to/Plume/plume.db
 ```
 
 For more information about what you can put in your `.env`,
@@ -76,7 +71,7 @@ copy "C:\ProgramData\chocolatey\lib\SQLite\tools\sqlite3.dll" "C:\Users\%USERNAM
 
 Now you may run the migrations:
 ```
-diesel migration run
+plm migration run
 ```
 
 Migrations should be run after each update. When in doubt, run them.
