@@ -21,7 +21,8 @@ Here is a sample of what you should put inside for **GNU/Linux** and **Mac OS X*
 # (replace USER, PASSWORD, PORT and DATABASE_NAME with your values)
 #
 # If you are using SQlite, use the full path of the database file (`plume.db` for instance)
-#DATABASE_URL=\etc\path\to\Plume\plume.db
+# Windows user's paths are backslashes, change them to forward slashes
+#DATABASE_URL=/etc/path/to/Plume/plume.db
 DATABASE_URL=postgres://USER:PASSWORD@IP:PORT/DATABASE_NAME
 
 # For PostgreSQL: migrations/postgres
@@ -44,13 +45,6 @@ MAIL_USER=example
 MAIL_PASSWORD=123456
 MAIL_HELO_NAME=example.org
 MAIL_ADDRESS=from@example.org
-```
-
-For **Windows** systems, everything is the same, unless you are using SQLite for your database, then you will need to change your paths
-from backslashes (\) to forward slashes (/) else you will receive error.
-
-```
-DATABASE_URL=C:/path/to/Plume/plume.db
 ```
 
 For more information about what you can put in your `.env`,

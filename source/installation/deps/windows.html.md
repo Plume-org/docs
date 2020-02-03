@@ -3,16 +3,23 @@ title: Dependencies on Windows
 ---
 
 There are several packages that need to be installed before getting started compiling
-Plume on Windows devices. This guide will only cover installations for SQLite, with 
-adding PostgreSQL in the future.
+Plume on Windows devices.
 
 1. Download and install [Git-SCM](https://git-scm.com/downloads)
 2. Download and install [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16)
-3. Install [Chocalatey](https://chocolatey.org/) using a PowerShell v2+ prompt:
+3. 
 
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-```
+    a. For SQLite Database:
+
+    Install [Chocalatey](https://chocolatey.org/) using a PowerShell v2+ prompt:
+
+    ```powershell
+    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    ```
+
+    b. For PostgreSQL:
+
+    Download [PostgreSQL Binaries](https://www.enterprisedb.com/download-postgresql-binaries), extract to an easy place (i.e. C:\Extra\pgsql), and add the bin folder to your system path variable.
 
 4. Download and install [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html) (i.e. C:\Extra\ssl)
 5. Create new system variable called "OPENSSL_DIR" with a value of `C:\Extra\ssl` (or wherever you installed OpenSSL **NOTE**: this is _not_ to the bin folder, it must be to root to get the bin and lib folders!)

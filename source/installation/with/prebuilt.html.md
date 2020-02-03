@@ -3,7 +3,7 @@ title: Installing pre-built binaries
 ---
 
 This installation method is only available for 64 bits Linux machines. Pre-built binairies
-for other platforms may come in the future.
+for other platforms may come in the future. For Windows users, try this [page](https://github.com/iamdoubz/Plume4Windows).
 
 You will need to have `wget` installed for this method to work.
 
