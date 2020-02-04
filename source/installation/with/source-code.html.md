@@ -12,6 +12,8 @@ cd Plume
 Then, you'll need to install Plume and the CLI tools to manage your instance.
 Run the following commands.
 
+For **GNU/Linux** and **Mac OS X**:
+
 ```bash
 # Build the front-end
 cargo install cargo-web
@@ -20,6 +22,43 @@ cargo web deploy -p plume-front --release
 # Build the back-end, replacing DATABASE either with
 # postgres or sqlite depending on what you want to use
 cargo install --no-default-features --features DATABASE
+
+# Build plm, the CLI helper, replacing DATABASE again
+cargo install --no-default-features --features DATABASE --path plume-cli
+
+```
+
+For **Windows**, if you are going to use SQLite, launch an additional cmd.exe as admin and do the following:
+
+```
+# Install, compile, and convert SQLite using chocolatey
+
+choco install sqlite
+cd C:\ProgramData\chocolatey\lib\SQLite\tools
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x86_amd64
+lib /MACHINE:x64 /def:sqlite3.def /out:sqlite3.lib
+
+# Copy sqlite3.lib to where you installed RustUp 
+copy C:\ProgramData\chocolatey\lib\SQLite\tools\sqlite3.lib C:\Users\%USERNAME%\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib\sqlite3.lib
+```
+
+You may close that cmd.exe window and proceed with your regularly scheduled installation. Remember to replace DATABASE
+with postgres or sqlite depending on what you want to use:
+
+```
+# Install diesel_cli 
+cargo +stable install diesel_cli --no-default-features --features DATABASE --version '=1.3.0' --verbose
+
+# Build the front-end
+cargo install cargo-web
+cargo web deploy -p plume-front --release
+
+# If using SQLite, copy sqlite3.lib from the stable version of RustUp to the nightly that was just installed
+copy C:\Users\%USERNAME%\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib\sqlite3.lib C:\Users\%USERNAME%\.rustup\toolchains\nightly-2020-01-15-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib\sqlite3.lib
+
+# Build the back-end, replacing DATABASE either with
+# postgres or sqlite depending on what you want to use
+cargo install --no-default-features --features DATABASE --path .
 
 # Build plm, the CLI helper, replacing DATABASE again
 cargo install --no-default-features --features DATABASE --path plume-cli

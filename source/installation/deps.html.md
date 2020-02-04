@@ -30,4 +30,7 @@ you:
   <li><a href="/installation/deps/macosx">
     Mac OS X
   </a></li>
+  <li><a href="/installation/deps/windows">
+    Windows
+  </a></li>
 </ul>

@@ -2,7 +2,7 @@
 title: Dependencies on Debian & Co
 ---
 
-First, make sure your computer is aware of the latest availabel versions of installable
+First, make sure your computer is aware of the latest available versions of installable
 packages. This command, and the other on this page, may require super-user rights, so
 you may want to prefix them by `sudo`.
 
