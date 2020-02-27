@@ -41,7 +41,7 @@ When writing theme for blogs, it can be usefull to know if the global instance t
 Thus, as a convention, dark themes should always have the word "dark" in their name.
 Plume then adds the current theme name to the CSS classes of the HTML document, allowing you to detect which kind of theme the user has.
 
-Here is an example that shows quotes in blue for ligth themes, and in orange for dark themes:
+Here is an example that shows quotes in blue for light themes, and in orange for dark themes:
 
 ```css
 article blockquote {
