@@ -20,6 +20,8 @@ meaning that all your users will get disconnected. You can generate one with `op
 - `SEARCH_INDEX`: the directory where the search index will be saved (`search_index` by default).
 - `MEDIA_UPLOAD_DIRECTORY`: the directory in which to store the uploaded medias (`./static/media` by default). Plume won't create this directory if it doesn't exist, so make sure to create it before.
 - `DEFAULT_THEME`: the name of the default theme. It should be the same as the name of the directory containing the theme in `static/css`.
+- `DB_MAX_SIZE`: the maximum number of database connections (`10` by default). Since 0.5.0.
+- `DB_MIN_IDLE`: the minimum idle database connection count (the same to `DB_MAX_SIZE` by default). Since 0.5.0.
 
 The SMTP server to send mails can be configured with:
 
