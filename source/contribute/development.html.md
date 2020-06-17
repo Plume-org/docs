@@ -164,10 +164,15 @@ But for these new languages to be visible in the interface as well, some changes
 First of all, make sure that the corresponding `.po` file is present in `po/plume`, and in `po/plume-front`.
 If it is not, ask someone who has access to the Crowdin API key (like a Crowdin manager or owner) to pull it with the Crowdin CLI tool.
 
+To find a manager, look at the list [in the sidebar of this page](https://crowdin.com/project/plume).
+These person are managers because they were involved enough in the project, and especially in the translation process.
+If you want to become a manager on Crowdin too, just ask us.
+
 Then, in `src/main.rs` and `plume-front/src/main.rs`, add the code corresponding to the language in the `init_i18n!` macro.
 If you don't know the code for the language: it is the name of the `.po` file, without the extension.
+Here is an exemple of [a Pull Request adding Persian](https://github.com/Plume-org/Plume/pull/782).
 
-`cargo check` to make sure everything compile, and you are good to go!
+`cargo check` to make sure everything compiles, and you are good to go!
 
 ## Working with the front-end
 
