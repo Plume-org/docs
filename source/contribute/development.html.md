@@ -156,6 +156,19 @@ There is no need to provide individual translations of  `i18n!`-wrapped strings 
 The strings will be uploaded to a third-party web service and translated automatically as
 a separate step.
 
+### Adding a language
+
+Managers of the Crowdin project may add new languages to the list of target languages.
+But for these new languages to be visible in the interface as well, some changes need to be made to the code.
+
+First of all, make sure that the corresponding `.po` file is present in `po/plume`, and in `po/plume-front`.
+If it is not, ask someone who has access to the Crowdin API key (like a Crowdin manager or owner) to pull it with the Crowdin CLI tool.
+
+Then, in `src/main.rs` and `plume-front/src/main.rs`, add the code corresponding to the language in the `init_i18n!` macro.
+If you don't know the code for the language: it is the name of the `.po` file, without the extension.
+
+`cargo check` to make sure everything compile, and you are good to go!
+
 ## Working with the front-end
 
 When working with the front-end, we try limit our use of JavaScript as much as possible.
