@@ -165,8 +165,8 @@ First of all, make sure that the corresponding `.po` file is present in `po/plum
 If it is not, ask someone who has access to the Crowdin API key (like a Crowdin manager or owner) to pull it with the Crowdin CLI tool.
 
 To find a manager, look at the list [in the sidebar of this page](https://crowdin.com/project/plume).
-These person are managers because they were involved enough in the project, and especially in the translation process.
-If you want to become a manager on Crowdin too, just ask us.
+These people are managers because they were involved enough in the project, and especially in the translation process.
+If you want to become a manager on Crowdin too, ask us [on Matrix](https://matrix.to/#/#plume:disroot.org).
 
 Then, in `src/main.rs` and `plume-front/src/main.rs`, add the code corresponding to the language in the `init_i18n!` macro.
 If you don't know the code for the language: it is the name of the `.po` file, without the extension.
