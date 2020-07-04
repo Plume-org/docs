@@ -18,6 +18,9 @@ Here are the variables that Plume uses:
 - `ROCKET_SECRET_KEY`: key used to sign private cookies and for CSRF protection. If it is not set, it will be regenerated everytime you restart Plume,
 meaning that all your users will get disconnected. You can generate one with `openssl rand -base64 32`.
 - `SEARCH_INDEX`: the directory where the search index will be saved (`search_index` by default).
+- `SEARCH_TAG_TOKENIZER`: the tokenizer used for tags when searching. `simple`, `ngram`, `whitespace` and `lindera` are available. `simple` tokenizer tokenizes the text by splitting on whitespaces and punctuation. `ngram` tokenizes by splitting words into bigram at a minimum and 8-gram at a maximum. `whitespace` tokenizes by splitting on whitespaces but not on punctuation. `lindera` tokenizes the text by splitting into Japanese morpheme, which is available only when build with `search-lindera` feature. `whitespace` by default. Since v0.5.0.
+- `SEARCH_CONTENT_TOKENIZER`: the tokenizer used for blog contents when searching. The same tokenizers to `SEARCH_TAG_TOKENIZER` are available. `simple` by default. Since v0.5.0.
+- `SEARCH_LANG`: the shortcut for the combination of `SEARCH_TAG_TOKENIZER` and `SEARCH_CONTENT_TOKENIZER`. Currently supports only `ja` and it requires `search-lindera` feature on build. This is experimental and might change in the future. Since v0.5.0.
 - `MEDIA_UPLOAD_DIRECTORY`: the directory in which to store the uploaded medias (`./static/media` by default). Plume won't create this directory if it doesn't exist, so make sure to create it before.
 - `DEFAULT_THEME`: the name of the default theme. It should be the same as the name of the directory containing the theme in `static/css`.
 - `DB_MAX_SIZE`: the maximum number of database connections (`10` by default). Since 0.5.0.
