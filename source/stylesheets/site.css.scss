@@ -18,7 +18,7 @@ h1, h2, h3 {
 header {
   grid-area: head;
   margin: 0;
-  padding: 20vh 20vw;
+  padding: 10vh 5vw;
   background: linear-gradient(0deg, $plumedark, $plume);
   color: white;
   font-size: 1.5em;
@@ -155,12 +155,31 @@ aside {
 
         & > a, & > details {
           display: block;
-          padding: 2em;
           border-bottom: none;
+        }
+
+        & > a, & > details > summary {
+          margin: 2em;
+        }
+        
+        & > details > summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            svg {
+                display: block;
+                transition: transform 0.1s ease-in;
+            }
+        }
+
+        & > details[open] > summary svg {
+            transform: rotate(-90deg);
         }
 
         & > a, & > details > summary > a {
           opacity: 0.6;
+          padding: 0px;
 
           &:hover {
             opacity: 1;
@@ -185,6 +204,10 @@ aside {
     & > ul > li > ul > li > ul > li > a {
       padding: 1em;
       padding-left: 4em;
+    }
+
+    details > ul > li > * {
+        padding-left: 1em;
     }
   }
 }

@@ -14,7 +14,7 @@
                     <a href="<%= i.url %>"><%= i.data.title %></a>
                 <% else %>
                     <details>
-                    <summary><a href="<%= i.url %>"><%= i.data.title %></a></summary>
+                    <summary><a href="<%= i.url %>"><%= i.data.title %></a><i data-feather="chevron-left"></i></summary>
                     <%= partial :nav_item, :locals => {
                         :items => children,
                         :resources => resources
