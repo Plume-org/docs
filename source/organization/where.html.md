@@ -23,10 +23,20 @@ We use Crowdin to translate Plume's projects.
 
 ## Matrix
 
-**[#plume:disroot.org](https://riot.im/app/#/room/#plume:disroot.org)**
+**[Group: +plume:disroot.org](https://app.element.io/#/group/+plume:disroot.org)**
+
+**[Main room: #plume:disroot.org](https://app.element.io/#/room/#plume:disroot.org)**
+
+**[Developers: #plume-dev:disroot.org](https://app.element.io/#/room/#plume-dev:disroot.org)**
+
+**[Translators: #plume-i18n:disroot.org](https://app.element.io/#/room/#plume-i18n:disroot.org)**
 
 Matrix is our main discussion and support channel. We also make announcements about the project here, so you can join it
 to stay tuned.
+
+We also have specialized rooms for developers and translators, that you are encouraged to join if you contribute to the project.
+
+You can also join the Plume group, to have the ability to only show Plume rooms if you want.
 
 ## Loomio (Framavox)
 
