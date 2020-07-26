@@ -12,7 +12,6 @@ your reverse proxy in this list:
   <li><a href="/installation/proxy/nginx">Nginx</a></li>
   <li><a href="/installation/proxy/apache">Apache</a></li>
   <li><a href="/installation/proxy/iis">IIS</a></li>
-  <li><a href="/installation/proxy/none">No reverse-proxy</a></li>
 </ul>
 
 If you don't have a reverse-proxy on your server yet but want one, we recommend
