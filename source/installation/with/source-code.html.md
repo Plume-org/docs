@@ -21,7 +21,7 @@ cargo web deploy -p plume-front --release
 
 # Build the back-end, replacing DATABASE either with
 # postgres or sqlite depending on what you want to use
-cargo install --no-default-features --features DATABASE
+cargo install --no-default-features --features DATABASE --path .
 
 # Build plm, the CLI helper, replacing DATABASE again
 cargo install --no-default-features --features DATABASE --path plume-cli
