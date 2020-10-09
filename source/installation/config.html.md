@@ -83,6 +83,8 @@ plm instance new
 plm users new --admin
 ```
 
+Note if you want to use LDAP: you should still create an administrator account, at least to give admin rights to your own LDAP account once it's registered.
+
 On **Windows**, there might be an error creating the admin user. To get around this, you need to run:
 ```
 plm users new --admin -n "adminusername" -N "Human Readable Admin Name" -b "Biography of Admin here" -p hackmeplease

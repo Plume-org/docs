@@ -59,3 +59,17 @@ PLUME_LOGO_192=icons/trwnh/paragraphs/plumeParagraphs192.png
 PLUME_LOGO_256=icons/trwnh/paragraphs/plumeParagraphs256.png
 PLUME_LOGO_512=icons/trwnh/paragraphs/plumeParagraphs512.png
 ```
+
+Plume support delegating authentication via LDAP.
+- `LDAP_ADDR`: address of the LDAP server
+- `LDAP_BASE_DN`: base DN used when binding, see explanation below
+- `LDAP_USER_NAME_ATTR`: attribut with user name ised when binding, see explanation below (default=`cn`)
+- `LDAP_USER_MAIL_ATTR`: attribut containing the mail address of the user (default=`mail`)
+- `LDAP_TLS`: connect to the LDAP server using TLS (default=false)
+
+Plume determines what to bind using `LDAP_BASE_DN`, `LDAP_USER_NAME_ATTR` and the user name.
+Assuming what you need Plume to bind is `username={user name},ou=users,dc=your-org`, the configuration would be the following:
+```bash
+LDAP_BASE_DN=ou=users,dc=your-org
+LDAP_USER_NAME_ATTR=username
+```
