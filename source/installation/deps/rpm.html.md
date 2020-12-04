@@ -4,7 +4,7 @@ title: Installing dependencies on RPM-based systems
 
 ```bash
 # If you want PostgreSQL
-dnf install postgresql-server postgresql-contrib libpqxx libpqxx-devel git curl gcc make openssl openssl-devel gettext clang-devel
+dnf install postgresql-server postgresql-contrib libpqxx libpqxx-devel libpq-devel git curl gcc make openssl openssl-devel gettext clang-devel
 
 # If you want SQLite
 dnf install libsq3-devel sqlite3 libsqlite3-dev git curl gcc make openssl openssl-devel gettext clang-devel
