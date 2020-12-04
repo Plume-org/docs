@@ -3,4 +3,5 @@
 .DS_Store
 .sass-cache
 build/
-crowdin.yml
+trans/
+locale/
