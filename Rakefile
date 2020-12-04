@@ -36,6 +36,6 @@ namespace :crowdin do
 
   desc "Upload translation sources"
   task :upload do
-    sh "crowdin", "upload", "source"
+    sh "crowdin", "upload", "sources"
   end
 end
