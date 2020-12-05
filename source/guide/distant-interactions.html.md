@@ -25,7 +25,7 @@ For blogs it is `https://your.instance/~/name@other.instance`
 When opening a remote profile like that, Plume will fetch articles this person has already published.
 However, it can take some time, so try to refresh the page a few times if no articles appears on the first try.
 Also note that old articles are not yet fetched when viewing a remote blog for the first time
-(this issue will probably be fixed sooner or later, see [#542](https://github.com/Plume-org/Plume/issues/542) for updates).
+(this issue will probably be fixed sooner or later, see [#542](https://git.joinplu.me/Plume/Plume/issues/542) for updates).
 
 ## Start to federate
 
