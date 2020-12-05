@@ -6,10 +6,10 @@ time: 30 minutes
 ---
 
 Some people contribute to Plume by improving it's source code. They propose changes to the
-software throught what is called "pull requests" on GitHub (thus you will need to create a GitHub
-account to follow this guide, if you don't have one yet).
+software throught what is called "pull requests" on Gitea or GitHub (thus you will need to create a Gitea
+or GitHub account to follow this guide, if you don't have one yet).
 
-Here is the [list of all pull requests needing to be reviewed](https://github.com/Plume-org/Plume/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc+review%3Arequired+label%3A%22S%3A+Ready+for+review%22).
+Here is the [list of all pull requests needing to be reviewed]()([GitHub](https://github.com/Plume-org/Plume/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc+review%3Arequired+label%3A%22S%3A+Ready+for+review%22)).
 Choose one that seems interesting to you, read the discussion for context about what needs to be reviewed,
 and what was already tested, and start your review.
 
@@ -36,7 +36,7 @@ If you know one of the programming languages used in Plume (Rust, SCSS, HTML and
 of the code: give advices about it's efficiency, ask for clarification if you are not sure what it does, point out potential
 bugs, etc.
 
-You can do that by going to the "Files changed" tab on the page of pull request on GitHub. Then you will be able to comment on the
+You can do that by going to the "Files changed" tab on the page of pull request on Gitea or GitHub. Then you will be able to comment on the
 diff, as seen in this GIF:
 
 ![Commenting on the diff](/images/code-review.gif)
@@ -45,7 +45,7 @@ diff, as seen in this GIF:
 
 Once you tested the changes, you need to tell to the person who proposed the pull request what you found.
 
-The best way to do that is to go to the "Files changed" tabs on the GitHub pull request, and to click the green "Review
+The best way to do that is to go to the "Files changed" tabs on the Gitea or GitHub pull request, and to click the green "Review
 changes" button, in the top right corner. Then write a comment in the box that appears, explaining what worked, and what went
 wrong. Don't hesitate to give precise information, explaining how to reproduce issues for instance. When making comments
 about someone else's work, be kind, and try to make constructive critics.
