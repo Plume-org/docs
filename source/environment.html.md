@@ -8,6 +8,8 @@ to configure the database, or the HTTP interface for instance.'
 Plume relies on some environment variables for some configuration options. You can either set them before
 starting the app with `cargo run` or write them in a `.env` file to have automatically loaded.
 
+## Basic
+
 Here are the variables that Plume uses:
 
 - `BASE_URL`: the domain name, or IP and port on which Plume is listening. It is used in all federation-related code.
@@ -23,6 +25,8 @@ meaning that all your users will get disconnected. You can generate one with `op
 - `DB_MAX_SIZE`: the maximum number of database connections (`10` by default). Since 0.5.0.
 - `DB_MIN_IDLE`: the minimum idle database connection count (the same to `DB_MAX_SIZE` by default). Since 0.5.0.
 
+## Mail
+
 The SMTP server to send mails can be configured with:
 
 - `MAIL_SERVER`: the SMTP server to connect to.
@@ -33,6 +37,8 @@ The SMTP server to send mails can be configured with:
 
 For the moment, Plume only sends mail when you need to reset your password (and only from the web interface, `plm users reset-password` doesn't send anything).
 If you don't plan to use this feature, you can simply remove (or comment) the lines to configure the mail server in your `.env`.
+
+## Logo
 
 You can also change the logo you want to use for your instance in this file. Your logo should be in the `static` directory.
 To make Plume load it, you can use:
@@ -58,4 +64,20 @@ PLUME_LOGO_160=icons/trwnh/paragraphs/plumeParagraphs160.png
 PLUME_LOGO_192=icons/trwnh/paragraphs/plumeParagraphs192.png
 PLUME_LOGO_256=icons/trwnh/paragraphs/plumeParagraphs256.png
 PLUME_LOGO_512=icons/trwnh/paragraphs/plumeParagraphs512.png
+```
+
+## LDAP
+
+Plume support delegating authentication via LDAP.
+- `LDAP_ADDR`: address of the LDAP server
+- `LDAP_BASE_DN`: base DN used when binding, see explanation below
+- `LDAP_USER_NAME_ATTR`: attribut with user name ised when binding, see explanation below (default=`cn`)
+- `LDAP_USER_MAIL_ATTR`: attribut containing the mail address of the user (default=`mail`)
+- `LDAP_TLS`: connect to the LDAP server using TLS (default=false)
+
+Plume determines what to bind using `LDAP_BASE_DN`, `LDAP_USER_NAME_ATTR` and the user name.
+Assuming what you need Plume to bind is `username={user name},ou=users,dc=your-org`, the configuration would be the following:
+```bash
+LDAP_BASE_DN=ou=users,dc=your-org
+LDAP_USER_NAME_ATTR=username
 ```
