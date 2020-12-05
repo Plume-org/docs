@@ -10,7 +10,7 @@ so all you need to know to write a theme is to know CSS.
 # Base template
 
 A good start can be the official base theme, that is written in SCSS, and that you can find
-[in Plume's repository](https://github.com/Plume-org/Plume/tree/master/assets/themes/default).
+[in Plume's repository](https://git.joinplu.me/Plume/Plume/src/branch/main/assets/themes/default).
 You can copy these files (they are under the AGPL-3.0 license), and start by changing the variables
 in `_variables.scss`. If you use this theme as a basis, the [SASS/SCSS](https://sass-lang.com/) will be
 needed to transform it to a single CSS file that an admin can install on their instance.
@@ -18,7 +18,7 @@ needed to transform it to a single CSS file that an admin can install on their i
 To test your theme, you can install a browser extension like [*Stylish*](https://userstyles.org) and copy your CSS inside.
 
 Plume updates may sometimes break your theme (if we make a layout change, add a new CSS class, or so on).
-If you want to ensure your theme continues to work as Plume is developed, following [the project on GitHub](https://github.com/Plume-org/Plume/) can notify you when we make changes that might affect your theme.
+If you want to ensure your theme continues to work as Plume is developed, following [the project on Gitea](https://git.joinplu.me/Plume/Plume)([GitHub](https://github.com/Plume-org/Plume/)) can notify you when we make changes that might affect your theme.
 Pull requests and commits breaking themes are normally clearly identified as such.
 
 # Detailed explanations
