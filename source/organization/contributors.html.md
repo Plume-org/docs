@@ -69,4 +69,4 @@ Skills:
 ## Want to add yourself here?
 
 You can either [do it by yourself](https://git.joinplu.me/plume/documentation/_edit/main/source/organization/contributors.html.md)
-if you have a Gitea account, or give Ana all the required informations and she will add you (see above for contact information).
+if you have a Gitea account, or give Ana/KitaitiMakoto all the required informations and she/he will add you (see above for contact information).
