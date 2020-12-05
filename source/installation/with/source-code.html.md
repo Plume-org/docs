@@ -5,7 +5,7 @@ title: Compiling from source
 The first step to compile Plume's source code is to get it.
 
 ```bash
-git clone https://git.joinplu.em/Plume/Plume.git
+git clone https://git.joinplu.me/Plume/Plume.git
 cd Plume
 ```
 
