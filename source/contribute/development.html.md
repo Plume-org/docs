@@ -10,7 +10,7 @@ Plume is mostly made in Rust. The back-end uses Rocket and Diesel. The front-end
 is in Rust too, thanks to WebAssembly. The stylesheets are written in SCSS.
 
 If you want to write some code but you don't really know where to start, you
-can try to find [an issue that interests you](https://github.com/Plume-org/Plume/issues).
+can try to find [an issue that interests you](https://git.joinplu.me/Plume/Plume/issues))([GitHub](https://github.com/Plume-org/Plume/issues)).
 
 Then, fork Plume (if you didn't already do it), `git clone` your fork, and start a
 new branch with `git checkout -b NAME-OF-THE-BRANCH`. You can now start to work on the
@@ -18,7 +18,7 @@ issue.
 
 Once you have something working, do `git add FILES THAT YOU CHANGED` (or `git add .` to add them all),
 and then `git commit`. Write a message explaining your changes, and do `git push origin NAME-OF-THE-BRANCH`
-to upload your work to GitHub. Open the URL that appears in the output of this last command to open
+to upload your work to Gitea or GitHub. Open the URL that appears in the output of this last command to open
 a pull request, that we will then review, and eventually merge.
 
 ## Installing the development environment
@@ -150,7 +150,7 @@ second the string to translate. You can specify format arguments after a `;`.
 If your string vary depending on the number of elements, provide the plural version
 as the third arguments, and the number of element as the first format argument.
 
-You can find example uses of this macro [here](https://github.com/Plume-org/gettext-macros#example).
+You can find example uses of this macro [here](https://git.joinplu.me/plume/gettext-macros#user-content-example).
 
 There is no need to provide individual translations of  `i18n!`-wrapped strings in pull requests.
 The strings will be uploaded to a third-party web service and translated automatically as
@@ -170,7 +170,7 @@ If you want to become a manager on Crowdin too, ask us [on Matrix](https://matri
 
 Then, in `src/main.rs` and `plume-front/src/main.rs`, add the code corresponding to the language in the `init_i18n!` macro.
 If you don't know the code for the language: it is the name of the `.po` file, without the extension.
-Here is an exemple of [a Pull Request adding Persian](https://github.com/Plume-org/Plume/pull/782).
+Here is an exemple of [a Pull Request adding Persian](https://git.joinplu.me/Plume/Plume/pulls/782).
 
 `cargo check` to make sure everything compiles, and you are good to go!
 

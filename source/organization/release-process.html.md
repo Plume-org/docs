@@ -17,10 +17,10 @@ major changes are made to the interface for example (even if the two are often l
 
 ## What gets in each version
 
-We don't set deadlines for new releases. We just assign issues (either bug to be fixed or feature requests) on GitHub to a given
+We don't set deadlines for new releases. We just assign issues (either bug to be fixed or feature requests) on Gitea to a given
 milestone as we feel it, and once it is complete, we make a new release.
 
-**[→ Milestones list on GitHub](https://github.com/Plume-org/Plume/milestones?direction=asc&sort=due_date)**
+**[→ Milestones list on  Gitea](hhttps://git.joinplu.me/Plume/Plume/milestones)**
 
 We should prefer making small releases often, than big ones once a year or so.
 
@@ -38,7 +38,7 @@ We should make sure the documentation is up-to-date before publishing a release.
 The `dev` branch of the docs should be merged into `stable` to be deployed on [docs.joinplu.me](https://docs.joinplu.me).
 
 For each release, we make an announcement as a blog post (on Plume of course), a message on the Matrix room,
-and a more technical/impersonal changelog on the GitHub release page (basically a list of the PR that were merged
+and a more technical/impersonal changelog on the Gitea release page (basically a list of the PR that were merged
 since the last release). This last technical changelog should include any steps that should be taken for this specific
 update that are not listed in the general update documentation.
 

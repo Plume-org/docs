@@ -4,15 +4,23 @@ icon: share-2
 summary: 'Places where you can find Plume online'
 ---
 
+## Gitea
+
+**[Plume on Gitea](https://git.joinplu.me/Plume)**
+
+Gitea is the place where the code lives. The repository for Plume itself is [Plume/Plume](https://git.joinplu.me/Plume).
+The source of the [documentation](https://git.joinplu.me/plume/documentation) and the [official website](https://git.joinplu.me/plume/joinplu.me)
+are also hosted here.
+
+Gitea issues are used to list accepted features that should be implemented, features that need to be discussed, or for bug reports.
+
 ## GitHub
 
 **[Plume-org on GitHub](https://github.com/Plume-org)**
 
-GitHub is the place where the code lives. The repository for Plume itself is [Plume-org/Plume](https://github.com/Plume-org/Plume).
-The source of the [documentation](https://github.com/Plume-org/docs) and the [official website](https://github.com/Plume-org/joinplu.me)
-are also hosted here.
+GitHub is used as a mirror of Gitea repositories.
 
-GitHub issues are used to list accepted features that should be implemented, features that need to be discussed, or for bug reports.
+GitHub issues are also used to list accepted features that should be implemented, features that need to be discussed, or for bug reports.
 
 ## Crowdin
 
@@ -58,7 +66,7 @@ We publish x86 docker images on Docker Hub. ARM images are hosted by [Lollipop C
 
 ## Joining one of these places
 
-We will eventually ask you if you want to be added the GitHib organization, as a Crowdin manager, to the Matrix moderators
+We will eventually ask you if you want to be added the Gitea or GitHib organization, as a Crowdin manager, to the Matrix moderators
 or to the authors of *~PlumeDev@fediverse.blog*.
 
 If you consider we should add you, you can also ask by yourselve.

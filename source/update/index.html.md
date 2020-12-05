@@ -15,4 +15,4 @@ Please choose the one you are using:
   <li><a href="/update/source-code">From source</a></li>
 </ul>
 
-Also please check [the release notes](https://github.com/Plume-org/Plume/releases) to see if any additional operation is needed.
+Also please check [the release notes](https://git.joinplu.me/Plume/Plume/releases) to see if any additional operation is needed.

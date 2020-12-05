@@ -7,7 +7,7 @@ time: 30 minutes
 
 Having an accurate, understandable and complete documentation is important.
 
-Our documentation is [hosted on GitHub](https://github.com/Plume-org/docs), so you
+Our documentation is [hosted on Gitea](https://git.joinplu.me/plume/documentation), so you
 will need an account here if you want to edit it. You will probably need to fork it
 to create a temporary copy you have the right to edit (with the button in the top right corner).
 
@@ -37,17 +37,17 @@ Our current documentation is probably not perfect, and proof-reading it helps a 
 this part only applies to the English documentation, if you want to improve the documentation in another language,
 see how to [translate it](/contribute/translations).
 
-To fix the mistakes you found, you will need to fork the documentation on GitHub (as explained in the first
+To fix the mistakes you found, you will need to fork the documentation on Gitea (as explained in the first
 paragraph of the previous part).
 
-Once it's done, choose the page you want to review, and find the corresponding file on GitHub (the URL of the page in
+Once it's done, choose the page you want to review, and find the corresponding file on Gitea (the URL of the page in
 the documentation and the name of the files are normally the same). Read the page to see if you can find typos, grammar
-mistakes, sentences that can be improved, etc. If you see anything that could be improved, go to GitHub and edit the file.
+mistakes, sentences that can be improved, etc. If you see anything that could be improved, go to Gitea and edit the file.
 
 
 ## Saving your work and proposing your changes
 
-Once you finished, you can save your work. To do that, GitHub asks you to make a short summary of your changes.
+Once you finished, you can save your work. To do that, Gitea asks you to make a short summary of your changes.
 
 ![The box to write a summary of your changes](/images/new-docs-page.png)
 

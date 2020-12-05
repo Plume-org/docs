@@ -11,12 +11,12 @@ you have to propose.
 ## It may need to be discussed
 
 If your feature is controversial, or not totally clear yet, the best is to open a new issue
-on [Gitea](https://git.joinplu.me/Plume/Plume/issues) or [GitHub](https://github.com/Plume-org/Plume/issues/new?template=feature_request.md).
+on [Gitea](https://git.joinplu.me/Plume/Plume/issues/new) or [GitHub](https://github.com/Plume-org/Plume/issues/new?template=feature_request.md).
 Give as much details as possible. Especially, explain which problem you are trying to solve with this new feature.
 
 ## It doesn't really need to be discussed
 
-Then you can open on [Gitea](https://git.joinplu.me/Plume/Plume/issues) or
+Then you can open on [Gitea](https://git.joinplu.me/Plume/Plume/issues/new) or
 [GitHub](https://github.com/Plume-org/Plume/issues/new?template=feature_request.md),
 if you have an account there. Just fill the information asked in the form, and click "Submit new issue".
 
