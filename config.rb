@@ -2,7 +2,7 @@
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :markdown, :fenced_code_blocks => true, :smartypants => true, :with_toc_data => true
 
 activate :syntax
 
