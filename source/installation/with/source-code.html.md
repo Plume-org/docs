@@ -28,6 +28,15 @@ cargo install --no-default-features --features DATABASE --path plume-cli
 
 ```
 
+Since v0.5.0, Plume supports [Lindera](https://github.com/lindera-morphology/lindera), a Japanese morphological analysis library for Japanese search. If you want to use it, pass `search-lindera` to `--features` option to build both plume and plume-cli:
+
+```bash
+cargo install --no-default-features --features DATABASE,search-lindera
+cargo install --no-default-features --features DATABASE,search-lindera --path plume-cli
+```
+
+And then, you can configure Plume by `SEARCH_TAG_TOKENIZER`, `SEARCH_CONTENT_TOKENIZER` and/or `SEARCH_LANG` environment variables. See [Useful Environment Variables](/environment/) for details.
+
 For **Windows**, if you are going to use SQLite, launch an additional cmd.exe as admin and do the following:
 
 ```
