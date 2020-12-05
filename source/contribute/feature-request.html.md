@@ -10,14 +10,14 @@ you have to propose.
 
 ## It may need to be discussed
 
-If your feature is controversial, or not totally clear yet, the best is to open a new discussion
-[on Loomio](https://framavox.org/g/WK40YHMA/plume). If you are not sure how to do that, we have
-[a guide about it](/contribute/discussion). Give as much details as possible. Especially, explain
-which problem you are trying to solve with this new feature.
+If your feature is controversial, or not totally clear yet, the best is to open a new issue
+on [Gitea](https://git.joinplu.me/Plume/Plume/issues) or [GitHub](https://github.com/Plume-org/Plume/issues/new?template=feature_request.md).
+Give as much details as possible. Especially, explain which problem you are trying to solve with this new feature.
 
 ## It doesn't really need to be discussed
 
-Then you can open [an issue on GitHub](https://github.com/Plume-org/Plume/issues/new?assignees=&labels=&template=feature_request.md&title=),
+Then you can open on [Gitea](https://git.joinplu.me/Plume/Plume/issues) or
+[GitHub](https://github.com/Plume-org/Plume/issues/new?template=feature_request.md),
 if you have an account there. Just fill the information asked in the form, and click "Submit new issue".
 
 If you don't have a GitHub account, you can also suggest your feature in [the Matrix room](/contribute/discussion), and we

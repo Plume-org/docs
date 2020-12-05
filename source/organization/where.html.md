@@ -12,8 +12,7 @@ GitHub is the place where the code lives. The repository for Plume itself is [Pl
 The source of the [documentation](https://github.com/Plume-org/docs) and the [official website](https://github.com/Plume-org/joinplu.me)
 are also hosted here.
 
-GitHub issues are used to list accepted features that should be implemented, or for bug reports. If a feature request needs to be discussed,
-a topic should be opened on Loomio first.
+GitHub issues are used to list accepted features that should be implemented, features that need to be discussed, or for bug reports.
 
 ## Crowdin
 
@@ -37,12 +36,6 @@ to stay tuned.
 We also have specialized rooms for developers and translators, that you are encouraged to join if you contribute to the project.
 
 You can also join the Plume group, to have the ability to only show Plume rooms if you want.
-
-## Loomio (Framavox)
-
-**[Plume's Loomio group](https://framavox.org/g/WK40YHMA/plume)**
-
-Loomio is used to discuss features that need the input of the community before being included (or not).
 
 ## Plume
 
