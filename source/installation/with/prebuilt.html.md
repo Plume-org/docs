@@ -7,10 +7,9 @@ for other platforms may come in the future. For Windows users, try this [page](h
 
 You will need to have `wget` installed for this method to work.
 
-To download and install the latest release, first define the following variables in your shell:
+To download and install the latest release, first define the following variable in your shell:
 
-- `PLUME_VERSION`: the Plume version to install. The latest is `0.5.0`.
-- `PLUME_DB`: the database backend to use. Either `postgres` or `sqlite`.
+- `DOWNLOAD_URI`: URI of archived binary file. You may find it at https://git.joinplu.me/Plume/Plume/releases. It includes database name `postgresP or `sqlite` in the file name. Choose which you want.
 
 Then run these commands:
 
@@ -22,7 +21,7 @@ mkdir Plume
 cd Plume
 
 # Download the files
-wget -O plume.tar.gz https://github.com/Plume-org/Plume/releases/download/$PLUME_VERSION/plume-$PLUME_DB.tar.gz
+wget -O plume.tar.gz $DOWNLOAD_URI
 # Extract them
 tar -xf plume.tar.gz
 mv bin/* ~/.cargo/bin/
