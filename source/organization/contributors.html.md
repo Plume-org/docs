@@ -17,7 +17,6 @@ Accounts:
 - GitHub: BaptisteGelez
 - Matrix: @baptistegelez:disroot.org
 - Fediverse: @Ana@soc.punktrash.club (Pleroma), @Ana@fediverse.blog (Plume)
-- Loomio: @anagelez
 - Crowdin: AnaGelez
 
 Skills:
@@ -38,7 +37,6 @@ Accounts:
 - GitHub: igalic
 - Matrix: @eenameename:matrix.org
 - Fediverse: @hirojin@dev.glitch.social (Professional), @meena@glitch.social (Personal)
-- Loomio: @meena
 
 Skills:
 
@@ -58,7 +56,6 @@ Accounts:
 - GitHub: fdb-hiroshima
 - Matrix: @fdb_hiroshima:matrix.org
 - Fediverse: @trinity@soc.punktrash.club (Pleroma), @FDB_hiroshima@fediverse.blog (Plume)
-- Loomio: @fdbhiroshima
 - Crowdin: fdb-hiroshima
 
 Skills:
