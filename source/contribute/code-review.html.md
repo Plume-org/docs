@@ -14,21 +14,9 @@ Choose one that seems interesting to you, read the discussion for context about 
 and what was already tested, and start your review.
 
 ## Test the changes
-<!-- This is no more available
-Each pull request is deployed in live so that you can easily test the changes they bring.
-The URL to access the test instance is `https://pr-XXX.joinplu.me/`, where `XXX` is the number
-of the pull request (that is shown next to the title on Gitea or GitHub).
 
-A list of all running test instances is also available on [pr-list.joinplu.me](https://joinplu.me). Only
-five instances may run at the same time, to avoid to overload our server. If the instance you wanted to access
-is not available, wait for the CI to run again (it will restart it), choose another pull request, or test it locally if you know how to do it.
+TODO: To be well documented.
 
-A good start is to go to the test instance for your pull request, and to see if everything works as expected,
-but also to try to find some corner cases that were not expected, and that may break something.
-
-Don't hesitate to try the feature on different devices too, and from different browser, especially if it changes
-the user interface.
--->
 ## Review the code
 
 If you know one of the programming languages used in Plume (Rust, SCSS, HTML and SQL mostly), you can also review the quality
