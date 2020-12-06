@@ -9,26 +9,13 @@ Some people contribute to Plume by improving it's source code. They propose chan
 software throught what is called "pull requests" on Gitea or GitHub (thus you will need to create a Gitea
 or GitHub account to follow this guide, if you don't have one yet).
 
-Here is the [list of all pull requests needing to be reviewed]()([GitHub](https://github.com/Plume-org/Plume/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc+review%3Arequired+label%3A%22S%3A+Ready+for+review%22)).
+Here is the [list of all pull requests needing to be reviewed](https://git.joinplu.me/Plume/Plume/pulls?q=&labels=57)([GitHub](https://github.com/Plume-org/Plume/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc+review%3Arequired+label%3A%22S%3A+Ready+for+review%22)).
 Choose one that seems interesting to you, read the discussion for context about what needs to be reviewed,
 and what was already tested, and start your review.
 
 ## Test the changes
 
-Each pull request is deployed in live so that you can easily test the changes they bring.
-The URL to access the test instance is `https://pr-XXX.joinplu.me/`, where `XXX` is the number
-of the pull request (that is shown next to the title on GitHub).
-
-A list of all running test instances is also available on [pr-list.joinplu.me](https://joinplu.me). Only
-five instances may run at the same time, to avoid to overload our server. If the instance you wanted to access
-is not available, wait for the CI to run again (it will restart it), choose another pull request, or test it locally
-if you know how to do it.
-
-A good start is to go to the test instance for your pull request, and to see if everything works as expected,
-but also to try to find some corner cases that were not expected, and that may break something.
-
-Don't hesitate to try the feature on different devices too, and from different browser, especially if it changes
-the user interface.
+Todo : to be documented
 
 ## Review the code
 

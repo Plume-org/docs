@@ -25,8 +25,8 @@ meaning that all your users will get disconnected. You can generate one with `op
 - `SEARCH_LANG`: the shortcut for the combination of `SEARCH_TAG_TOKENIZER` and `SEARCH_CONTENT_TOKENIZER`. Currently supports only `ja` and it requires `search-lindera` feature on build. This is experimental and might change in the future. Since v0.5.0.
 - `MEDIA_UPLOAD_DIRECTORY`: the directory in which to store the uploaded medias (`./static/media` by default). Plume won't create this directory if it doesn't exist, so make sure to create it before.
 - `DEFAULT_THEME`: the name of the default theme. It should be the same as the name of the directory containing the theme in `static/css`.
-- `DB_MAX_SIZE`: the maximum number of database connections (`10` by default). Since 0.5.0.
-- `DB_MIN_IDLE`: the minimum idle database connection count (the same to `DB_MAX_SIZE` by default). Since 0.5.0.
+- `DB_MAX_SIZE`: the maximum number of database connections (`10` by default). Since v0.5.0.
+- `DB_MIN_IDLE`: the minimum idle database connection count (the same to `DB_MAX_SIZE` by default). Since v0.5.0.
 
 ## Mail
 
@@ -74,7 +74,7 @@ PLUME_LOGO_512=icons/trwnh/paragraphs/plumeParagraphs512.png
 Plume support delegating authentication via LDAP.
 - `LDAP_ADDR`: address of the LDAP server
 - `LDAP_BASE_DN`: base DN used when binding, see explanation below
-- `LDAP_USER_NAME_ATTR`: attribut with user name ised when binding, see explanation below (default=`cn`)
+- `LDAP_USER_NAME_ATTR`: attribut with user name used when binding, see explanation below (default=`cn`)
 - `LDAP_USER_MAIL_ATTR`: attribut containing the mail address of the user (default=`mail`)
 - `LDAP_TLS`: connect to the LDAP server using TLS (default=false)
 
