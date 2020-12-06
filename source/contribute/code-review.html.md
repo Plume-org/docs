@@ -1,93 +1,44 @@
 ---
-title: Contributors
-summary: 'Who contributes to Plume?'
-icon: users
+title: Review the proposed changes
+icon: git-pull-request
+summary: 'Review one of the proposed pull requests.'
+time: 30 minutes
 ---
 
-## Kitaiti, Makoto
+Some people contribute to Plume by improving it's source code. They propose changes to the
+software throught what is called "pull requests" on Gitea or GitHub (thus you will need to create a Gitea
+or GitHub account to follow this guide, if you don't have one yet).
 
-**Member of the moderation team**
+Here is the [list of all pull requests needing to be reviewed](https://git.joinplu.me/Plume/Plume/pulls?q=&labels=57)([GitHub](https://github.com/Plume-org/Plume/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc+review%3Arequired+label%3A%22S%3A+Ready+for+review%22)).
+Choose one that seems interesting to you, read the discussion for context about what needs to be reviewed,
+and what was already tested, and start your review.
 
-Preferred pronouns: he/him
+## Test the changes
 
-Open for mentoring: yes
+Todo : to be documented
 
-Accounts:
+## Review the code
 
-- Gitea: git.joinplu.me/KitaitiMakoto
-- GitHub: KitaitiMakoto
-- Matrix: @kitaitimakoto:matrix.org
-- Fediverse: @KitaitiMakoto@bookwor.ms (Mastodon), @KitaitiMakoto@fediverse.blog (Plume), @KitaitiMakoto@blogs.kitaitimakoto.net (Plume)
-- Crowdin: KitaitiMakoto
+If you know one of the programming languages used in Plume (Rust, SCSS, HTML and SQL mostly), you can also review the quality
+of the code: give advices about it's efficiency, ask for clarification if you are not sure what it does, point out potential
+bugs, etc.
 
-Skills:
+You can do that by going to the "Files changed" tab on the page of pull request on Gitea or GitHub. Then you will be able to comment on the
+diff, as seen in this GIF:
 
-- Tech-related: Ruby, Rust, JavaScript, HTML, CSS/SCSS, Linux
-- Languages: Japanese (native), English (not good)
+![Commenting on the diff](/images/code-review.gif)
 
-## Igor Galić
+## Writing your review
 
-**Member of the moderation team**
+Once you tested the changes, you need to tell to the person who proposed the pull request what you found.
 
-Preferred pronouns: they/them
+The best way to do that is to go to the "Files changed" tabs on the Gitea or GitHub pull request, and to click the green "Review
+changes" button, in the top right corner. Then write a comment in the box that appears, explaining what worked, and what went
+wrong. Don't hesitate to give precise information, explaining how to reproduce issues for instance. When making comments
+about someone else's work, be kind, and try to make constructive critics.
 
-Open for mentoring: yes
+Then click one of "Request changes", "Comment" or "Approve" to send your comments.
 
-Accounts:
-
-- Gitea: git.joinplu.me/igalic
-- GitHub: igalic
-- Matrix: @eenameename:matrix.org
-- Fediverse: @hirojin@dev.glitch.social (Professional), @meena@glitch.social (Personal)
-
-Skills:
-
-- Tech-related: Unix, build systems, distributed systems, Ruby, Python, Rust
-- Languages: Bosnian (native), German (native), English (fluent)
-
-## Trinity/fdb-hiroshima
-
-**Member of the moderation team**
-
-Preferred pronouns: they/them
-
-Open for mentoring: no, but feel free to ask questions when you need
-
-Accounts:
-
-- Gitea: git.joinplu.me/trinity-1686a
-- GitHub: fdb-hiroshima
-- Matrix: @fdb_hiroshima:matrix.org
-- Fediverse: @trinity@soc.punktrash.club (Pleroma), @FDB_hiroshima@fediverse.blog (Plume)
-- Crowdin: fdb-hiroshima
-
-Skills:
-
-- Tech-related: Rust, Linux
-- Languages: French (native), English
-
-## Ana Gelez
-
-**Former member of the moderation team**
-
-Preferred pronouns: she/her
-
-Open for mentoring: no
-
-Accounts:
-
-- Gitea: git.joinplu.me/kiwii
-- GitHub: elegaanz
-- Matrix: @kiwidu38:tedomum.net
-- Fediverse: @Ana@soc.punktrash.club (Pleroma), @Ana@fediverse.blog (Plume)
-- Crowdin: AnaGelez
-
-Skills:
-
-- Tech-related: Rust, JavaScript, HTML, CSS/SCSS, Linux
-- Languages: French (native), English (not perfect), German (not good), Esperanto (still learning)
-
-## Want to add yourself here?
-
-You can either [do it by yourself](https://git.joinplu.me/plume/documentation/_edit/main/source/organization/contributors.html.md)
-if you have a Gitea account, or give Ana all the required informations and she will add you (see above for contact information).
+It is possible that the person who opened the pull request asks for more details: the review doesn't really
+stop until the pull request is fully accepted (but you have the right to tell them you don't want to help with
+review anymore, someone else will probably take care of it).
