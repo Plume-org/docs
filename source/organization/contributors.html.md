@@ -25,27 +25,6 @@ Skills:
 - Tech-related: Ruby, Rust, JavaScript, HTML, CSS/SCSS, Linux
 - Languages: Japanese (native), English (not good)
 
-## Ana Gelez
-
-**Member of the moderation team**
-
-Preferred pronouns: she/her
-
-Open for mentoring: yes
-
-Accounts:
-
-- Gitea: git.joinplu.me/kiwii
-- GitHub: BaptisteGelez
-- Matrix: @baptistegelez:disroot.org
-- Fediverse: @Ana@soc.punktrash.club (Pleroma), @Ana@fediverse.blog (Plume)
-- Crowdin: AnaGelez
-
-Skills:
-
-- Tech-related: Rust, JavaScript, HTML, CSS/SCSS, Linux
-- Languages: French (native), English (not perfect), German (not good), Esperanto (still learning)
-
 ## Igor Galić
 
 **Member of the moderation team**
@@ -86,6 +65,27 @@ Skills:
 
 - Tech-related: Rust, Linux
 - Languages: French (native), English
+
+## Ana Gelez
+
+**Former member of the moderation team**
+
+Preferred pronouns: she/her
+
+Open for mentoring: no
+
+Accounts:
+
+- Gitea: git.joinplu.me/kiwii
+- GitHub: elegaanz
+- Matrix: @kiwidu38:tedomum.net
+- Fediverse: @Ana@soc.punktrash.club (Pleroma), @Ana@fediverse.blog (Plume)
+- Crowdin: AnaGelez
+
+Skills:
+
+- Tech-related: Rust, JavaScript, HTML, CSS/SCSS, Linux
+- Languages: French (native), English (not perfect), German (not good), Esperanto (still learning)
 
 ## Want to add yourself here?
 
