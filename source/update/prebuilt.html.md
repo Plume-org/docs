@@ -6,7 +6,7 @@ Prebuilt binaries are only available for 64 bits Linux machines.
 
 You'll need to define a variable in your shell first:
 
-- `DOWNLOAD_URI`: URI of archived binary file. You may find it at https://git.joinplu.me/Plume/Plume/releases. It includes database name `postgresP` or `sqlite` in the file name. Choose which you want.
+- `DOWNLOAD_URI`: URI of archived binary file. You may find it at https://git.joinplu.me/Plume/Plume/releases. It includes database name `postgres` or `sqlite` in the file name. Choose which you want.
 
 Then run these commands:
 

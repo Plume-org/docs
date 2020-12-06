@@ -9,7 +9,7 @@ You will need to have `wget` installed for this method to work.
 
 To download and install the latest release, first define the following variable in your shell:
 
-- `DOWNLOAD_URI`: URI of archived binary file. You may find it at https://git.joinplu.me/Plume/Plume/releases. It includes database name `postgresP` or `sqlite` in the file name. Choose which you want.
+- `DOWNLOAD_URI`: URI of archived binary file. You may find it at https://git.joinplu.me/Plume/Plume/releases. It includes database name `postgres` or `sqlite` in the file name. Choose which you want.
 
 Then run these commands:
 
