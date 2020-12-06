@@ -4,6 +4,27 @@ summary: 'Who contributes to Plume?'
 icon: users
 ---
 
+## Kitaiti, Makoto
+
+**Member of the moderation team**
+
+Preferred pronouns: he/him
+
+Open for mentoring: yes
+
+Accounts:
+
+- Gitea: git.joinplu.me/KitaitiMakoto
+- GitHub: KitaitiMakoto
+- Matrix: @kitaitimakoto:matrix.org
+- Fediverse: @KitaitiMakoto@bookwor.ms (Mastodon), @KitaitiMakoto@fediverse.blog (Plume), @KitaitiMakoto@blogs.kitaitimakoto.net (Plume)
+- Crowdin: KitaitiMakoto
+
+Skills:
+
+- Tech-related: Ruby, Rust, JavaScript, HTML, CSS/SCSS, Linux
+- Languages: Japanese (native), English (not good)
+
 ## Ana Gelez
 
 **Member of the moderation team**
