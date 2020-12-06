@@ -4,26 +4,26 @@ summary: 'Who contributes to Plume?'
 icon: users
 ---
 
-## Ana Gelez
+## Kitaiti, Makoto
 
 **Member of the moderation team**
 
-Preferred pronouns: she/her
+Preferred pronouns: he/him
 
 Open for mentoring: yes
 
 Accounts:
 
-- Gitea: git.joinplu.me/kiwii
-- GitHub: BaptisteGelez
-- Matrix: @baptistegelez:disroot.org
-- Fediverse: @Ana@soc.punktrash.club (Pleroma), @Ana@fediverse.blog (Plume)
-- Crowdin: AnaGelez
+- Gitea: git.joinplu.me/KitaitiMakoto
+- GitHub: KitaitiMakoto
+- Matrix: @kitaitimakoto:matrix.org
+- Fediverse: @KitaitiMakoto@bookwor.ms (Mastodon), @KitaitiMakoto@fediverse.blog (Plume), @KitaitiMakoto@blogs.kitaitimakoto.net (Plume)
+- Crowdin: KitaitiMakoto
 
 Skills:
 
-- Tech-related: Rust, JavaScript, HTML, CSS/SCSS, Linux
-- Languages: French (native), English (not perfect), German (not good), Esperanto (still learning)
+- Tech-related: Ruby, Rust, JavaScript, HTML, CSS/SCSS, Linux
+- Languages: Japanese (native), English (not good)
 
 ## Igor Galić
 
@@ -65,6 +65,27 @@ Skills:
 
 - Tech-related: Rust, Linux
 - Languages: French (native), English
+
+## Ana Gelez
+
+**Former member of the moderation team**
+
+Preferred pronouns: she/her
+
+Open for mentoring: no
+
+Accounts:
+
+- Gitea: git.joinplu.me/kiwii
+- GitHub: elegaanz
+- Matrix: @kiwidu38:tedomum.net
+- Fediverse: @Ana@soc.punktrash.club (Pleroma), @Ana@fediverse.blog (Plume)
+- Crowdin: AnaGelez
+
+Skills:
+
+- Tech-related: Rust, JavaScript, HTML, CSS/SCSS, Linux
+- Languages: French (native), English (not perfect), German (not good), Esperanto (still learning)
 
 ## Want to add yourself here?
 
