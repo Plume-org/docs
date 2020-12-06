@@ -66,7 +66,7 @@ We publish x86 docker images on Docker Hub. ARM images are hosted by [Lollipop C
 
 ## Joining one of these places
 
-We will eventually ask you if you want to be added the Gitea or GitHib organization, as a Crowdin manager, to the Matrix moderators
+We will eventually ask you if you want to be added the Gitea or GitHub organization, as a Crowdin manager, to the Matrix moderators
 or to the authors of *~PlumeDev@fediverse.blog*.
 
 If you consider we should add you, you can also ask by yourselve.

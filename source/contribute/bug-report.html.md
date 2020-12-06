@@ -10,7 +10,7 @@ abnormal (unexpected behavior, display issue, a grammar mistake, etc), you can r
 
 ## If you have a Gitea or GitHub account
 
-If the issue is about Plume itself, go on [Gitea issues page](https://git.joinplu.me/Plume/Plume/issues/new) or [GitHub issues page](https://github.com/Plume-org/Plume/issues/new?assignees=&labels=C%3A+Bug&template=bug_report.md&title=).
+If the issue is about Plume itself, go on [Gitea issues page](https://git.joinplu.me/Plume/Plume/issues/new) ([GitHub issues page](https://github.com/Plume-org/Plume/issues/new?assignees=&labels=C%3A+Bug&template=bug_report.md&title=)).
 Then, all you have to do is to fill the title and the description of your issue, and to validate.
 
 If your issue isn't about Plume itself, find the appropriate repository [in the list](https://git.joinplu.me/Plume)([GitHub](https://github.com/Plume-org)), go to the "Issues"

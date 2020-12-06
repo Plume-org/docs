@@ -10,7 +10,7 @@ Plume is mostly made in Rust. The back-end uses Rocket and Diesel. The front-end
 is in Rust too, thanks to WebAssembly. The stylesheets are written in SCSS.
 
 If you want to write some code but you don't really know where to start, you
-can try to find [an issue that interests you](https://git.joinplu.me/Plume/Plume/issues))([GitHub](https://github.com/Plume-org/Plume/issues)).
+can try to find [an issue that interests you](https://git.joinplu.me/Plume/Plume/issues) ([GitHub](https://github.com/Plume-org/Plume/issues)).
 
 Then, fork Plume (if you didn't already do it), `git clone` your fork, and start a
 new branch with `git checkout -b NAME-OF-THE-BRANCH`. You can now start to work on the
