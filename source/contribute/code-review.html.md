@@ -15,7 +15,14 @@ and what was already tested, and start your review.
 
 ## Test the changes
 
-Todo : to be documented
+To test the changes, you need build development environment following the [development guide](../development/).
+
+After that, check out the source code of the pull reuquest you will test. You can see from which repository and branch you should checkout at the pull request page, For instance, [issue #813](https://git.joinplu.me/Plume/Plume/pulls/813) was sent from `igalic/Plume:refactor/extract-actors`. You can know that by seeing the line blow title of the pull request, which says "igalic wants to merge 18 commits from igalic/Plume:refactor/extract-actors into main".
+![](https://i.gyazo.com/00c352f66ad85f550a34784e8706dc71.png)
+
+Check out the branch, build code, run migration if needed and you can now test the changes by visiting `http://localhost:7878`.
+
+Leep comments at the pull request page after you tested.
 
 ## Review the code
 
