@@ -71,7 +71,7 @@ PLUME_LOGO_512=icons/trwnh/paragraphs/plumeParagraphs512.png
 
 ## LDAP
 
-Plume support delegating authentication via LDAP.
+Plume support delegating authentication via LDAP since v0.6.0.
 
 - `LDAP_ADDR`: address of the LDAP server
 - `LDAP_BASE_DN`: base DN used when binding, see explanation below
