@@ -5,6 +5,11 @@ $black: invert($gray);
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
+:root {
+  --lang-switcher-margin: 2vw;
+  --lang-switcher-width: 2em;
+}
+
 html, body {
   padding: 0px;
   margin: 0px;
@@ -22,6 +27,15 @@ header {
   background: linear-gradient(0deg, $plumedark, $plume);
   color: white;
   font-size: 1.5em;
+
+  .language-switcher {
+    position: absolute;
+    top: var(--lang-switcher-margin);
+    right: var(--lang-switcher-margin);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
 }
 
 body {
@@ -344,5 +358,67 @@ a.action {
       "head head head head head"
       "cont cont cont cont cont"
       "foot foot foot foot foot";
+  }
+}
+
+.language-switcher {
+  position: relative;
+  font-size: 1rem;
+
+  [aria-haspopup] {
+    display: block;
+    width: var(--lang-switcher-width);
+    padding: 0;
+    line-height: 1;
+    border: none;
+    background: transparent;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &[aria-expanded="true"] {
+      opacity: 0.5;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  [aria-hidden="true"] {
+    display: none;
+  }
+
+  .languages {
+    position: absolute;
+    right: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0.5em 0;
+    max-height: calc(90vh - var(--lang-switcher-margin) - var(--lang-switcher-width));
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    border-radius: 0.1em;
+    background: #ffffff;
+    box-shadow: 0 0 16px -6px rgba(0, 0, 0, 0.6);
+  }
+
+  .language {
+    padding: 0;
+
+    a {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 0.5em 1em;
+      border-left: solid 0.5em transparent;
+
+      &:hover, &:focus {
+        border-left-color: $plume;
+      }
+    }
   }
 }
