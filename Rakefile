@@ -51,6 +51,16 @@ task :build_trans_src do
   sh "middleman", "build", "--build-dir", LOCALE_DIR
 end
 
+desc "Deploy docs.joinplue.me"
+task :deploy => :build_site do
+  sh "netlify", "deploy", "--site", "40419055-f669-42be-8d07-0c1dcc0dc24b", "--dir", BUILD_DIR, "--prod"
+end
+
+desc "Deploy translate.docs.joinplue.me"
+task :deploy_trans => :build_trans do
+  sh "netlify", "deploy", "--site", "2b1e232b-ac98-4680-9ab4-6d4eee0d84cb", "--dir", TRANS_DIR, "--prod"
+end
+
 namespace :crowdin do
   desc "Download translations"
   task :download => :build_trans_src do
