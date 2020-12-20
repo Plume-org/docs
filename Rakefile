@@ -36,7 +36,7 @@ task :build_base do
 end
 
 desc "Build site for translate.docs.joinplu.me"
-task :build_trans do
+task :build_trans => "crowdin:download" do
   sh "middleman", "build", "--build-dir", TRANS_DIR
 
   (LOCALE_DIR/PSEUDO_LANG/"trans").glob("**/*.html").each do |html|
