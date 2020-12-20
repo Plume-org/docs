@@ -24,7 +24,8 @@ end
 desc "Build site"
 task :build_site => [:build_base, "crowdin:download"] do
   LOCALE_DIR.glob("**/*.html").each do |html|
-    dest = Pathname(html.to_path.sub(LOCALE_DIR, BUILD_DIR))
+    dest = Pathname(html.to_path.sub(%r|#{LOCALE_DIR}/([^/]+)/trans|, "#{BUILD_DIR}/\\1"))
+    next if dest.file?
     dest.parent.mkpath
     copy html, dest
   end
