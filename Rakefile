@@ -69,7 +69,7 @@ namespace :crowdin do
   end
 
   desc "Upload translation sources"
-  task :upload do
+  task :upload => :build_trans_src do
     sh "crowdin", "upload", "sources"
   end
 
