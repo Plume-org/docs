@@ -19,7 +19,7 @@ show_links: yes
     <article>
         <i data-feather="<%= res.data.icon %>"></i>
         <h2>
-            <a href="<%= res.url %>"><%= res.data.title %></a>
+            <%= link_to res.data.title, res %>
         </h2>
         <p><%= res.data.summary %></p>
     </article>

@@ -19,5 +19,5 @@ Give as much details as possible. Especially, explain which problem you are tryi
 Then you can open on [Gitea](https://git.joinplu.me/Plume/Plume/issues/new) ([GitHub](https://github.com/Plume-org/Plume/issues/new?template=feature_request.md)),
 if you have an account there. Just fill the information asked in the form, and click "Submit new issue".
 
-If you don't have a Gitea nor GitHub account, you can also suggest your feature in [the Matrix room](/contribute/discussion), and we
+If you don't have a Gitea nor GitHub account, you can also suggest your feature in [the Matrix room](../discussion/), and we
 will create the issue for you.

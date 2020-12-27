@@ -48,7 +48,7 @@ MAIL_ADDRESS=from@example.org
 ```
 
 For more information about what you can put in your `.env`,
-see [the documentation about environment variables](/environment).
+see [the documentation about environment variables](../../environment/).
 
 Now we need to run migrations. Migrations are scripts used to update
 the database. To run the migrations, you can do for **GNU/Linux** and **Mac OS X**:
@@ -91,9 +91,9 @@ plm users new --admin -n "adminusername" -N "Human Readable Admin Name" -b "Biog
 ```
 
 For more information about these commands, and the arguments you can give them,
-check out [their documentation](/CLI).
+check out [their documentation](../../CLI/).
 
 Now that Plume is configured, if you are in a production environment you probably
 want to configure your init system to make it easier to manage.
 
-<a class="action" href="/installation/init">Configure init system</a>
+<a class="action" href="../init/">Configure init system</a>

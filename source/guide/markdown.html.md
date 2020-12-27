@@ -31,4 +31,4 @@ Language is the name of the language you are using.
 The supported languages are those in [this repository](https://github.com/sublimehq/Packages/tree/fa6b8629c95041bf262d4c1dab95c456a0530122) since we use SublimeText's syntax file.
 Usually the name is in lower-case: for instance `Python` can be highlighted with `python`.
 
-To configure the theme to use, you will have to [choose a different theme for your bblog](/guide/manage-a-blog).
+To configure the theme to use, you will have to [choose a different theme for your bblog](../manage-a-blog/).

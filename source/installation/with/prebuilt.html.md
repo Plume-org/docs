@@ -40,4 +40,4 @@ To check that everything went well, you can run `plm --help`. It should show an 
 
 If everything is working, you can configure your instance.
 
-<a class="action" href="/installation/config">Configuration</a>
+<a class="action" href="../../config/">Configuration</a>

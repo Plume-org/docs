@@ -8,10 +8,10 @@ on the same machine, so that people are redirected to the correct one. Please ch
 your reverse proxy in this list:
 
 <ul class="choices">
-  <li><a href="/installation/proxy/caddy">Caddy</a></li>
-  <li><a href="/installation/proxy/nginx">Nginx</a></li>
-  <li><a href="/installation/proxy/apache">Apache</a></li>
-  <li><a href="/installation/proxy/iis">IIS</a></li>
+  <li><a href="caddy/">Caddy</a></li>
+  <li><a href="nginx/">Nginx</a></li>
+  <li><a href="apache/">Apache</a></li>
+  <li><a href="iis/">IIS</a></li>
 </ul>
 
 If you don't have a reverse-proxy on your server yet but want one, we recommend

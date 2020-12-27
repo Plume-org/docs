@@ -32,12 +32,12 @@ task :build_site => [:build_base, "crowdin:download"] do
 end
 
 task :build_base do
-  sh "middleman", "build"
+  sh "bundle", "exec", "middleman", "build"
 end
 
 desc "Build site for translate.docs.joinplu.me"
 task :build_trans => "crowdin:download" do
-  sh "middleman", "build", "--build-dir", TRANS_DIR
+  sh "bundle", "exec", "middleman", "build", "--build-dir", TRANS_DIR
 
   (LOCALE_DIR/PSEUDO_LANG/"trans").glob("**/*.html").each do |html|
     doc = html.read
@@ -49,7 +49,7 @@ task :build_trans => "crowdin:download" do
 end
 
 task :build_trans_src do
-  sh "middleman", "build", "--build-dir", LOCALE_DIR
+  sh "bundle", "exec", "middleman", "build", "--build-dir", LOCALE_DIR
 end
 
 desc "Deploy docs.joinplue.me"

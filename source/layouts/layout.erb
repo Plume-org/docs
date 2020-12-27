@@ -7,17 +7,6 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "…" %> ⋅ Plume documentation</title>
 
-    <% if ENV['CROWDIN'] == 'on' %>
-      <script type="text/javascript">
-        var _jipt = [];
-        _jipt.push(['project', 'plume-docs']);
-        _jipt.push(['escape', function() {
-          window.location.href = 'https://docs.joinplu.me';
-        }]);
-      </script>
-      <script type="text/javascript" src="//cdn.crowdin.com/jipt/jipt.js"></script>
-    <% end %>
-
     <%= stylesheet_link_tag "site" %>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3.12.1/swagger-ui.css">
@@ -32,7 +21,7 @@
         <button aria-controls="languages" aria-haspopup="true" aria-expanded="false"><img src="/images/LanguageIcon.png" alt="switch language"></button>
         <ul id="languages" class="languages" aria-hidden="true">
           <% data.languages.each_pair do |code, name| %>
-          <li lang="<%=h code %>" translate="no" class="language"><%= link_to h(name), code == "en" ? "/" : "/#{code}/", hreflang: h(code), rel: "alternate" %></li>
+          <li lang="<%=h code %>" translate="no" class="language"><%= link_to_lang name, code %></li>
           <% end %>
         </ul>
       </div>
@@ -40,7 +29,7 @@
     <aside>
       <i id="menu" data-feather="menu"></i>
       <nav>
-        <a href="/"><span>Plume documentation</span><img src="/images/logo.svg" alt="Plume logo"></a>
+        <% link_to "/index.html" do %><span>Plume documentation</span><img src="/images/logo.svg" alt="Plume logo"><% end %>
 	    <% resources = sitemap.resources
 	        .select{ |p| p.path =~ /\.html/ && p.path != "index.html" }
 	        .sort { |a, b| a.path <=> b.path }

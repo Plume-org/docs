@@ -35,7 +35,7 @@ You can find a list of the icons you can use on [this page](https://feathericons
 
 Our current documentation is probably not perfect, and proof-reading it helps a lot! However please note
 this part only applies to the English documentation, if you want to improve the documentation in another language,
-see how to [translate it](/contribute/translations).
+see how to [translate it](../translations/).
 
 To fix the mistakes you found, you will need to fork the documentation on Gitea (as explained in the first
 paragraph of the previous part).

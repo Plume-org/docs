@@ -35,7 +35,7 @@ cargo install --no-default-features --features DATABASE,search-lindera
 cargo install --no-default-features --features DATABASE,search-lindera --path plume-cli
 ```
 
-And then, you can configure Plume by `SEARCH_TAG_TOKENIZER`, `SEARCH_CONTENT_TOKENIZER` and/or `SEARCH_LANG` environment variables. See [Useful Environment Variables](/environment/) for details.
+And then, you can configure Plume by `SEARCH_TAG_TOKENIZER`, `SEARCH_CONTENT_TOKENIZER` and/or `SEARCH_LANG` environment variables. See [Useful Environment Variables](../../../environment/) for details.
 
 For **Windows**, if you are going to use SQLite, launch an additional cmd.exe as admin and do the following:
 
@@ -77,4 +77,4 @@ These commands can take a long time to run and use quite a lot of resources.
 
 Once it's done, you can configure your instance.
 
-<a class="action" href="/installation/config">Configuration</a>
+<a class="action" href="../../config/">Configuration</a>

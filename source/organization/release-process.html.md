@@ -20,7 +20,7 @@ major changes are made to the interface for example (even if the two are often l
 We don't set deadlines for new releases. We just assign issues (either bug to be fixed or feature requests) on Gitea to a given
 milestone as we feel it, and once it is complete, we make a new release.
 
-**[→ Milestones list on  Gitea](hhttps://git.joinplu.me/Plume/Plume/milestones)**
+**[→ Milestones list on  Gitea](https://git.joinplu.me/Plume/Plume/milestones)**
 
 We should prefer making small releases often, than big ones once a year or so.
 

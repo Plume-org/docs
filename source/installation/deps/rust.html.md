@@ -46,4 +46,4 @@ You can check that everything is correctly installed with `rustc --version` and
 
 We can now compile Plume's source code.
 
-<a class="action" href="/installation/with/source-code">Compiling Plume</a>
+<a class="action" href="../../with/source-code/">Compiling Plume</a>

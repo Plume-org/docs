@@ -29,7 +29,7 @@ One these pages, you will find a list of languages. Select the one you want to t
 
 ![The list of all currently available languages](/images/language-list.png)
 
-If your language is not in the list, [tell us](/contribute/discussion), we will add it.
+If your language is not in the list, [tell us](../discussion/), we will add it.
 
 Once you selected a language, you will see a list of files to translate. Find one that is not
 100% complete, and open it. Something like that should load:

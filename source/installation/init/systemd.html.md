@@ -42,4 +42,4 @@ systemctl status plume.service
 If everything works fine, the last step before you can use your Plume instance
 is to configure a reverse-proxy.
 
-<a class="action" href="/installation/proxy">Reverse-proxy configuration</a>
+<a class="action" href="../../proxy/">Reverse-proxy configuration</a>

@@ -28,4 +28,4 @@ sudo plume.plm users new -n 'admin' -N 'name' -b 'bio' -e 'admin@domain.name' -p
 And that's it! You can now setup a reverse-proxy to access Plume from other machines
 than your server (which is probably what you want 😁).
 
-<a class="action" href="/installation/proxy">Configure a reverse-proxy</a>
+<a class="action" href="../../proxy/">Configure a reverse-proxy</a>

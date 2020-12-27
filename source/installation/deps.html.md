@@ -18,19 +18,19 @@ are not the same, so we need to know what is installed on your machine to guide
 you:
 
 <ul class="choices">
-  <li><a href="/installation/deps/deb">
+  <li><a href="deb/">
     Debian, Ubuntu or another Linux ditribution based on DEB
   </a></li>
-  <li><a href="/installation/deps/rpm">
+  <li><a href="rpm/">
     Fedora, RHEL, CentOS or another Linux ditribution based on RPM
   </a></li>
-  <li><a href="/installation/deps/gentoo">
+  <li><a href="gentoo/">
     Gentoo
   </a></li>
-  <li><a href="/installation/deps/macosx">
+  <li><a href="macosx/">
     Mac OS X
   </a></li>
-  <li><a href="/installation/deps/windows">
+  <li><a href="windows/">
     Windows
   </a></li>
 </ul>

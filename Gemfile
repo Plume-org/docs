@@ -7,3 +7,4 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem 'redcarpet'
 gem 'middleman-syntax'
 gem 'rake'
+gem 'webrick'

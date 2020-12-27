@@ -16,4 +16,4 @@ brew install postgres
 
 Now that these dependencies have been installed, we need to install Rust which has a special installer.
 
-<a class="action" href="/installation/deps/rust">Let's do it!</a>
+<a class="action" href="../rust/">Let's do it!</a>

@@ -1,10 +1,10 @@
 <nav>
   <ul>
-   <li>
-    <a href="https://joinplu.me"><img src="/images/logo.svg" alt="Plume logo">Plume</a>
-   </li>
     <li>
-       <a href="/contribute/">Contribute</a>
+       <% link_to "/index.html" do %><img src="/images/logo.svg" alt="Plume logo">Plume<% end %>
+    </li>
+    <li>
+       <%= link_to "Contribute", "/contribute/index.html" %>
     </li>
     <li>
        <a href="https://git.joinplu.me/Plume/Plume">Source code</a>

@@ -23,7 +23,7 @@ a pull request, that we will then review, and eventually merge.
 
 ## Installing the development environment
 
-Please refer to the [installation guide](/installation). Choose to compile Plume
+Please refer to the [installation guide](../../installation/). Choose to compile Plume
 from source when asked. Instead of using `cargo install`, use `cargo run` which
 starts a freshly compiled debugging version of Plume.
 
@@ -80,7 +80,7 @@ also owned by the "plume" user, but with a different name. Then, you'll need to 
 this instance too.
 
 The easiest way to do it is probably to install `plm` and `plume` globally (as explained
-[here](/installation/with/source-code)), but with the `--debug` flag to avoid long compilation
+[here](../../installation/with/source-code/)), but with the `--debug` flag to avoid long compilation
 times. Then create a copy of your `.env` file in another directory, and change the `DATABASE_URL`
 and `ROCKET_PORT` variables. Then copy the migration files in this new directory and run them.
 
@@ -88,7 +88,7 @@ and `ROCKET_PORT` variables. Then copy the migration files in this new directory
 plm migration run
 ```
 
-Setup the new instance with `plm` [as explained here](/installation/config).
+Setup the new instance with `plm` [as explained here](../../installation/config/).
 
 Now, all you need for your two instances to be able to communicate is a fake domain
 name with HTTPS for each of them. The first step to have that on your local machine is

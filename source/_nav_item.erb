@@ -11,10 +11,10 @@
                     .sort{ |a, b| -(a.data.priority || 0) <=> -(b.data.priority || 0) }
                 %>
                 <% if children.size == 0 %>
-                    <a href="<%= i.url %>"><%= i.data.title %></a>
+                    <%= link_to i.data.title, i %>
                 <% else %>
                     <details>
-                    <summary><a href="<%= i.url %>"><%= i.data.title %></a><i data-feather="chevron-left"></i></summary>
+                    <summary><%= link_to i.data.title, i %><i data-feather="chevron-left"></i></summary>
                     <%= partial :nav_item, :locals => {
                         :items => children,
                         :resources => resources

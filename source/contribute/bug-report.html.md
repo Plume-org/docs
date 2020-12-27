@@ -19,5 +19,5 @@ tab, click the green "New issue" button, and describe your problem.
 ## If you don't have a Gitea nor GitHub account
 
 If you don't have a Gitea nor GitHub account, and don't want to create one, you can also report your issue on Matrix.
-Join the Plume room as explained in [this guide](/contribute/discussion), and send a message explaining what is wrong.
+Join the Plume room as explained in [this guide](../discussion/), and send a message explaining what is wrong.
 We will take care of creating an issue on Gitea or GitHub for you.
