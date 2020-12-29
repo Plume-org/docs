@@ -4,5 +4,6 @@
 .sass-cache
 build/
 trans/
+translate/
 locale/
 .netlify/
