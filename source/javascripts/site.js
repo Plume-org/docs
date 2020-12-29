@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         control.setAttribute('aria-expanded', 'true');
         popup.setAttribute('aria-hidden', 'false');
-
       }
     });
   }
