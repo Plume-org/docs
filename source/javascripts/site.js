@@ -37,7 +37,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const languageSwitchers = [];
   for (const switcher of document.getElementsByClassName('language-switcher')) {
-    new LanguageSwitcher(switcher);
+    languageSwitchers.push(new LanguageSwitcher(switcher));
   }
+
+  document.body.addEventListener('click', event => {
+    if (languageSwitchers.some(ls => ls.element.contains(event.target))) {
+      return;
+    }
+    for (const ls of languageSwitchers) {
+      ls.collapse();
+    }
+  });
 });
