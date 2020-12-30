@@ -9,10 +9,10 @@ The instructions to update your instance depends on your installation method.
 Please choose the one you are using:
 
 <ul class="choices">
-  <li><a href="../docker/">Docker</a></li>
-  <li><a href="../yunohost/">YunoHost</a></li>
-  <li><a href="../prebuilt/">Prebuilt binaries</a></li>
-  <li><a href="../source-code/">From source</a></li>
+  <li><a href="docker/">Docker</a></li>
+  <li><a href="yunohost/">YunoHost</a></li>
+  <li><a href="prebuilt/">Prebuilt binaries</a></li>
+  <li><a href="source-code/">From source</a></li>
 </ul>
 
 Also please check [the release notes](https://git.joinplu.me/Plume/Plume/releases) to see if any additional operation is needed.
