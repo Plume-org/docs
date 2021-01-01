@@ -19,6 +19,8 @@ Here are the variables that Plume uses:
 - `ROCKET_PORT`: the port on which Plume should listen ([`7878` by default](https://twitter.com/ag_dubs/status/852559264510070784)).
 - `ROCKET_SECRET_KEY`: key used to sign private cookies and for CSRF protection. If it is not set, it will be regenerated everytime you restart Plume,
 meaning that all your users will get disconnected. You can generate one with `openssl rand -base64 32`.
+- `FORM_SIZE`: the maximum amount of form data Plume will accept. `32768` (32MiB) by default.
+- `ACTIVITY_SIZE`: the maximum amount of ActivityPub message data Plume will accept.
 - `SEARCH_INDEX`: the directory where the search index will be saved (`search_index` by default).
 - `SEARCH_TAG_TOKENIZER`: the tokenizer used for tags when searching. `simple`, `ngram`, `whitespace` and `lindera` are available. `simple` tokenizer tokenizes the text by splitting on whitespaces and punctuation. `ngram` tokenizes by splitting words into bigram at a minimum and 8-gram at a maximum. `whitespace` tokenizes by splitting on whitespaces but not on punctuation. `lindera` tokenizes the text by splitting into Japanese morpheme, which is available only when build with `search-lindera` feature. `whitespace` by default. Since v0.5.0.
 - `SEARCH_CONTENT_TOKENIZER`: the tokenizer used for blog contents when searching. The same tokenizers to `SEARCH_TAG_TOKENIZER` are available. `simple` by default. Since v0.5.0.
