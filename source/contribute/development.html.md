@@ -117,20 +117,14 @@ To install Caddy, please refer to [their website](https://caddyserver.com/docs/i
 a file called `Caddyfile` in the same directory you ran `mkcert` and write this inside.
 
 ```
-plume.one:443 {
-  bind 127.0.0.1
-  proxy / 127.0.0.1:7878 {
-    transparent
-  }
-  tls plume.one+1.pem plume.one+1-key.pem
+plume01.localhost {
+  reverse_proxy localhost:7878
+  tls plume01.localhost.pem plume01.localhost-key.pem
 }
 
-plume.two:443 {
-  bind 127.0.0.1
-  proxy / 127.0.0.1:8787 {
-    transparent
-  }
-  tls plume.one+1.pem plume.one+1-key.pem
+plume02.localhost {
+  reverse_proxy 127.0.0.1:8787
+  tls plume02.localhost.pem plume02.localhost-key.pem
 }
 ```
 
