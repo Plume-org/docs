@@ -138,7 +138,7 @@ definitions:
         type: array
         example:
           - "alice"
-          - "bob@plume.one"
+          - "bob@plume01.localhost"
       blog_id:
         description: The ID of the blog in which this article was published.
         type: integer
