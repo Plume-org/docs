@@ -113,7 +113,7 @@ Finally, we need a reverse proxy to load these certificates and redirect to the 
 We will use Caddy here as it is really simple to configure, but if you are more at ease with something else you can also
 use alternatives.
 
-To install Caddy, please refer to [their website](https://caddyserver.com/download). Then create
+To install Caddy, please refer to [their website](https://caddyserver.com/docs/install). Then create
 a file called `Caddyfile` in the same directory you ran `mkcert` and write this inside.
 
 ```
