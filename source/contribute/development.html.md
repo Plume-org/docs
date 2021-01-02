@@ -95,8 +95,8 @@ name with HTTPS for each of them. The first step to have that on your local mach
 to edit your `/etc/hosts` file, to create two new aliases by adding the following lines.
 
 ```
-127.0.0.1       plume.one
-127.0.0.1       plume.two
+127.0.0.1       plume01.localhost
+127.0.0.1       plume02.localhost
 ```
 
 Now, we need to create SSL certificates for each of these domains. We will use `mkcert`
@@ -105,7 +105,8 @@ Once you installed it, run.
 
 ```bash
 mkcert -install
-mkcert plume.one plume.two
+mkcert plume01.localhost
+mkcert plume02.localhost
 ```
 
 Finally, we need a reverse proxy to load these certificates and redirect to the correct Plume instance for each domain.
@@ -134,7 +135,7 @@ plume.two:443 {
 ```
 
 Eventually replace the ports in the `proxy` blocks by the one of your two instances, and
-then run `caddy`. You can now open your browser and load `https://plume.one` and `https://plume.two`.
+then run `caddy`. You can now open your browser and load `https://plume01.localhost` and `https://plume02.localhost`.
 
 ## Running tests
 
