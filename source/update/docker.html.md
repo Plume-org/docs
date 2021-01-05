@@ -10,7 +10,10 @@ Then, run:
 docker-compose pull
 
 # Stop your instance
-docker-compose down
+docker-compose stop plume
+
+# Remove container of current version
+docker-compose kill plume
 
 # Run migrations
 docker-compose run --rm plume plm migration run
