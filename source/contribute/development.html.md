@@ -133,6 +133,8 @@ then run `caddy`. You can now open your browser and load `https://plume01.localh
 
 ## Running tests
 
+To run tests, use `DATABASE_URL` for tests and run migration at first.
+
 To run tests of `plume-models` use `RUST_TEST_THREADS=1`, otherwise tests are run
 concurrently, which causes error because they all use the same database.
 
