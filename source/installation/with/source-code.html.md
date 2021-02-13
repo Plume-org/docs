@@ -16,8 +16,8 @@ For **GNU/Linux** and **Mac OS X**:
 
 ```bash
 # Build the front-end
-cargo install cargo-web
-cargo web deploy -p plume-front --release
+cargo install wasm-pack
+wasm-pack build --target web --release plume-front
 
 # Build the back-end, replacing DATABASE either with
 # postgres or sqlite depending on what you want to use
@@ -59,8 +59,8 @@ with postgres or sqlite depending on what you want to use:
 cargo +stable install diesel_cli --no-default-features --features DATABASE --version '=1.3.0' --verbose
 
 # Build the front-end
-cargo install cargo-web
-cargo web deploy -p plume-front --release
+cargo install wasm-pack
+wasm-pack build --target web --release plume-front
 
 # If using SQLite, copy sqlite3.lib from the stable version of RustUp to the nightly that was just installed
 copy C:\Users\%USERNAME%\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib\sqlite3.lib C:\Users\%USERNAME%\.rustup\toolchains\nightly-2020-01-15-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib\sqlite3.lib
