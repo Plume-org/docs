@@ -33,19 +33,19 @@ paths:
         List posts.
       parameters:
         - name: title
-          in: path
+          in: query
           description: Only list article with this specific title
           required: false
           schema:
             type: string
         - name: subtitle
-          in: path
+          in: query
           description: Only list article with this specific subtitle
           required: false
           schema:
             type: string
         - name: content
-          in: path
+          in: query
           description: Only list article with this specific content (in HTML)
           required: false
           schema:
