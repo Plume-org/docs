@@ -21,6 +21,13 @@ class Pathname
   alias to_str to_s
 end
 
+desc "Run all tasks"
+task :all => ["crowdin:upload", :wait_trans_updated, :deploy, :deploy_trans]
+
+task :wait_trans_updated do
+  sleep 30
+end
+
 desc "Build site"
 task :build_site => [:build_base, "crowdin:download"] do
   LOCALE_DIR.glob("**/*.html").each do |html|
