@@ -29,6 +29,7 @@ meaning that all your users will get disconnected. You can generate one with `op
 - `DEFAULT_THEME`: the name of the default theme. It should be the same as the name of the directory containing the theme in `static/css`.
 - `DB_MAX_SIZE`: the maximum number of database connections (`10` by default). Since v0.5.0.
 - `DB_MIN_IDLE`: the minimum idle database connection count (the same to `DB_MAX_SIZE` by default). Since v0.5.0.
+- `RUST_LOG`: the log level Pume outputs (`info` by default). You can set it for each library such as `RUST_LOG=debug,html5ever=warn,hyper=warn,tantivy=warn`.
 
 ## Mail
 
