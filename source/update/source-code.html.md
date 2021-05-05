@@ -11,7 +11,8 @@ git pull origin master
 git checkout PLUME_VERSION # Skip this step if you want to use master, and not a tagged release
 
 # Build the front-end
-cargo web deploy -p plume-front
+cargo install wasm-pack
+wasm-pack build --target web --release plume-front
 
 # Update plm
 cargo install --path plume-cli --force --features DATABASE
