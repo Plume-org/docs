@@ -64,12 +64,12 @@ MDomain DOMAIN_NAME auto
 
 <VirtualHost *:80>
     ServerName DOMAIN_NAME
-<VirtualHost>
+</VirtualHost>
 
 <VirtualHost *:443>
     ServerName DOMAIN_NAME
     ProxyPass / http://127.0.0.1:7878/
     ProxyPassReverse / http://127.0.0.1:7878/
     SSLEngine On
-<VirtualHost>
+</VirtualHost>
 ```
