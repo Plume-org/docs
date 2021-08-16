@@ -57,8 +57,10 @@ Since Apache httpd 2.4.30, there's a new *experimental* module called [mod_md](h
 ```apache
 MDBaseServer on
 MDCertificateAgreement https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf
-MDRequireHttps permanent    # This means our http vhost will be automatically redirect to https
-ServerAdmin you@DOMAIN_NAME # This is required to register with Let's Encrypt
+# The next configuration directive means our http vhost will be automatically redirect to https
+MDRequireHttps permanent
+# ServerAdmin is required to register with Let's Encrypt
+ServerAdmin you@DOMAIN_NAME
 
 MDomain DOMAIN_NAME auto
 
