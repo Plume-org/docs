@@ -70,6 +70,10 @@ When translating Plume (and related projects), please try to follow these rules:
 The style of inclusive that is choosen is not very important (just try to keep coherent with what is already done).
 - Don't be too formal (but stay polite!).
 
+### Translation guides
+
+- [French translation guide](../translations_fr/)
+
 ---
 
 That's it, you know everything you need to translate Plume! Thank you for your help!
