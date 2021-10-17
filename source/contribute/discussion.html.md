@@ -14,7 +14,7 @@ with, maybe we speak it too, and even if we don't we will find ways to talk with
 
 Matrix is federated chat (but it doesn't use ActivityPub 😛). If you don't have an account yet, you
 can find an instance [here](https://www.hello-matrix.net/public_servers.php) (if you don't know which one to choose, just go for matrix.org).
-Once you created an account, open [this link to join `#plume:disroot.org`](https://riot.im/app/#/room/#plume:disroot.org). And you are done!
+Once you created an account, open [this link to join `#plume-blog:matrix.org`](https://matrix.to/#/#plume-blog:matrix.org). And you are done!
 
 This place is the best one to give feedback or to ask for help if you encounter issues while using Plume, or while contributing for example.
 

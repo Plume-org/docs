@@ -30,13 +30,11 @@ We use Crowdin to translate Plume's projects.
 
 ## Matrix
 
-**[Group: +plume:disroot.org](https://app.element.io/#/group/+plume:disroot.org)**
+**[Group: +plume-blog:matrix.org](https://matrix.to/#/#plume-blog:matrix.org)**
 
-**[Main room: #plume:disroot.org](https://app.element.io/#/room/#plume:disroot.org)**
+**[Main room: #plume-blog:matrix.org](https://matrix.to/#/#plume-blog:matrix.org)**
 
-**[Developers: #plume-dev:disroot.org](https://app.element.io/#/room/#plume-dev:disroot.org)**
-
-**[Translators: #plume-i18n:disroot.org](https://app.element.io/#/room/#plume-i18n:disroot.org)**
+**[Developers: #plume-dev:matrix.org](https://matrix.to/#/#plume-dev:matrix.org)**
 
 Matrix is our main discussion and support channel. We also make announcements about the project here, so you can join it
 to stay tuned.
