@@ -12,7 +12,21 @@ time: 2 minutes
 
 ## Glossaire
 
-- email: e-mail
+- email: courriel
 - feed: flux
 - tag: étiquette
 - token: jeton
+- boost: partager
+- support: soutenir, accepter ou gérer selon le contexte
+- edit: modifier, publier ou imprimer selon le contexte (éditer est un anglicisme à éviter)
+- editor: interface (de saisie ou de modification)
+- like: un « j'aime »
+- submit: « enregistrer » ou « envoyer » peut être plus judicieux que « soumettre »
+
+## Ponctuation
+
+Utiliser des [espaces insécables](https://fr.wikipedia.org/wiki/Espace_ins%C3%A9cable#En_France) lorsque c'est pertinent (signes de ponctuations notamment).
+
+Maintenir la cohérence entre l’utilisation de ' et de ’ pour l’apostrophe.
+
+Guillements doubles "" à traduire par des guillements «»
