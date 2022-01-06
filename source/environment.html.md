@@ -29,6 +29,7 @@ meaning that all your users will get disconnected. You can generate one with `op
 - `DEFAULT_THEME`: the name of the default theme. It should be the same as the name of the directory containing the theme in `static/css`.
 - `DB_MAX_SIZE`: the maximum number of database connections (`10` by default). Since v0.5.0.
 - `DB_MIN_IDLE`: the minimum idle database connection count (the same to `DB_MAX_SIZE` by default). Since v0.5.0.
+- `SIGNUP`: the sign-up strategy (`password` by default). "password" means anyone can sign up with email address and password without confirmation. "email" means Plume requires email confirmation, which needs the mail server configuration detailed later. Since 0.7.1.
 - `RUST_LOG`: the log level Plume outputs (`info` by default). You can set it for each library such as `RUST_LOG=debug,html5ever=warn,hyper=warn,tantivy=warn`.
 
 ## Mail
@@ -36,6 +37,7 @@ meaning that all your users will get disconnected. You can generate one with `op
 The SMTP server to send mails can be configured with:
 
 - `MAIL_SERVER`: the SMTP server to connect to.
+- `MAIL_PORT`: the SMTP port number.
 - `MAIL_USER`: the username for authentication purposes.
 - `MAIL_PASSWORD`: its password.
 - `MAIL_HELO_NAME`: the name sent during EHLO/HELO.
