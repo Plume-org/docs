@@ -2,7 +2,7 @@
 title: Updating with Docker
 ---
 
-To update your dockerized Plume instance, replace the version tag with `v0.5.0` in your `docker-compose.yml`
+To update your dockerized Plume instance, replace the version tag with `0.7.1` in your `docker-compose.yml`
 Then, run:
 
 ```bash

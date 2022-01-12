@@ -3,7 +3,7 @@ title: Updating from source
 ---
 
 To update your instance, run these commands with `plume` user if you created it, or with your default user, in the Plume directory.
-Replace `DATABASE` with either postgres or sqlite depending on what you are using, and `PLUME_VERSION` with the latest version tag (`0.4.0-alpha-4` currently).
+Replace `DATABASE` with either postgres or sqlite depending on what you are using, and `PLUME_VERSION` with the latest version tag (`0.7.1` currently).
 
 ```bash
 # Get the latest version of the code
