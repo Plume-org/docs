@@ -53,6 +53,10 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
         client_max_body_size 10m;
+        if ($request_method ~* "(GET)") {
+          add_header "Access-Control-Allow-Origin"  *;
+        }
+
     }
 }
 ```
