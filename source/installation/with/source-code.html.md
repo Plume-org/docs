@@ -12,6 +12,8 @@ cd Plume
 Then, you'll need to install Plume and the CLI tools to manage your instance.
 Run the following commands.
 
+---
+
 For **GNU/Linux** and **Mac OS X**:
 
 ```bash
@@ -37,6 +39,8 @@ cargo install --no-default-features --features DATABASE,search-lindera --path pl
 
 And then, you can configure Plume by `SEARCH_TAG_TOKENIZER`, `SEARCH_CONTENT_TOKENIZER` and/or `SEARCH_LANG` environment variables. See [Useful Environment Variables](../../../environment/) for details.
 
+---
+
 For **Windows**, if you are going to use SQLite, launch an additional cmd.exe as admin and do the following:
 
 ```
@@ -51,17 +55,26 @@ lib /MACHINE:x64 /def:sqlite3.def /out:sqlite3.lib
 copy C:\ProgramData\chocolatey\lib\SQLite\tools\sqlite3.lib C:\Users\%USERNAME%\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib\sqlite3.lib
 ```
 
-You may close that cmd.exe window and proceed with your regularly scheduled installation. Remember to replace DATABASE
+You may close that cmd.exe window and proceed with your regularly scheduled installation. Remember to replace `DATABASE`
 with postgres or sqlite depending on what you want to use:
 
 ```
 # Install diesel_cli 
 cargo +stable install diesel_cli --no-default-features --features DATABASE --version '=1.3.0' --verbose
+```
 
-# Build the front-end
+Currently, the installation of `wasm-pack` may fail on Windows 64bit with the latest stable version. If this problem persists, set the version to `0.9.1` (which is the easiest workaround). (see [can't install cargo wasm-pack - Stackoverflow](https://stackoverflow.com/questions/68646684/cant-install-cargo-wasm-pack)). As an alternative, you can use one of the fix-steps mentioned in the Stackoverflow solution.
+
+```
+# Install wasm-pack
 cargo install wasm-pack
+# if the install fails, use:
+# cargo install wasm-pack --vers 0.9.1
+# Build the front-end
 wasm-pack build --target web --release plume-front
+```
 
+```
 # If using SQLite, copy sqlite3.lib from the stable version of RustUp to the nightly that was just installed
 copy C:\Users\%USERNAME%\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib\sqlite3.lib C:\Users\%USERNAME%\.rustup\toolchains\nightly-2020-01-15-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib\sqlite3.lib
 
