@@ -85,9 +85,12 @@ paths:
                cover_id:
                  description: The ID of the cover image.
                  type: integer
+               author:
+                 description: The username of the user who is authoring the post.
+                 type: string
              required:
                - title
-               - description
+               - source
                - author
 
 definitions:
